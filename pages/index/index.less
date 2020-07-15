@@ -1,0 +1,95 @@
+/**index.wxss**/
+.home_wrapper {
+    background: #f6f6f6;
+    min-height: 100vh;
+    padding-bottom: 200rpx;
+    .home_banner_back {
+        width: 100%;
+        height: 300rpx;
+        background: url(http://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/home_nav_back.png) no-repeat center;
+        background-size: 100% 100%;
+        position: relative;
+        .home_banner {
+            width: 708rpx;
+            height: 282rpx;
+            background: #369;
+            border-radius: 10rpx;
+            position: absolute;
+            top: 89rpx;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        } 
+    }
+    .home_main {
+        padding: 0 20rpx;
+        margin-top: 78rpx;
+    }
+   .module_title {
+       height: 92rpx;
+       background:linear-gradient(180deg,rgba(249,217,204,0.97) 0%,rgba(248,249,250,1) 100%);
+        border-radius:20rpx 20rpx 0rpx 0rpx;
+        display: flex;
+        align-items: center;
+        color: #F08440;
+        font-size: 38rpx;
+        font-size: 500;
+        padding-left: 19rpx;
+        &.insurance_title {
+            margin-top: 55rpx;
+            background:linear-gradient(180deg,rgba(208,250,238,1) 0%,rgba(248,249,250,1) 100%);
+            color: #33C29D;
+        }
+   }
+   .services_project_box {
+       background: #fff;
+       display: flex;
+       height:200rpx;
+       background:rgba(255,255,255,1);
+       border-radius:0rpx 0rpx 10rpx 10rpx;
+       align-items: center;
+       justify-content: space-around;
+       .project_item {
+           display: flex;
+           flex-direction: column;
+        //    align-items: flex-end;
+        //    justify-content: center;
+           .item_icon {
+               width: 90rpx;
+               height: 90rpx;
+               margin-bottom: 17rpx;
+               &.icon_client {
+                   background: url(https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_client.png) no-repeat center;
+                   background-size: contain;
+                    margin-left: 15rpx;
+               }
+               &.icon_my_card {
+                   background: url(https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_my_card.png) no-repeat center;
+                   background-size: contain;
+                   margin-left: 10rpx;
+               }
+               &.icon_public_active {
+                   background: url(https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_public_active.png) no-repeat center;
+                   background-size: contain;
+                   margin-left: 17rpx;
+               }
+           }
+           .item_name {
+            font-size:28rpx;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:40rpx;
+           }
+       }
+       .project_split {
+           height: 131rpx;
+           width: 2rpx;
+           background: #f7f7f7;
+       }
+   }
+   .product_list_box {
+       background: #fff;
+       padding: 0 30rpx;
+   }
+}

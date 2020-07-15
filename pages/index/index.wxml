@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class="home_wrapper">
+    <!-- banner部分 -->
+    <view class="home_banner_back">
+        <view class="home_banner"></view>
+    </view>
+    <view class="home_main">
+        <!-- 服务项目 -->
+        <view class="module_title">服务项目</view>
+        <view class="services_project_box">
+            <view class="project_item" catch:tap="goToClientManage">
+                <view class="item_icon icon_client"></view>
+                <view class="item_name">客户管理</view>
+            </view>
+            <view class="project_split"></view>
+            <view class="project_item">
+                <view class="item_icon icon_my_card"></view>
+                <view class="item_name">我的名片</view>
+            </view>
+            <view class="project_split"></view>
+            <view class="project_item">
+                <view class="item_icon icon_public_active"></view>
+                <view class="item_name">发布动态</view>
+            </view>
+        </view>
+        <!-- 手术意外险 -->
+        <view class="module_title insurance_title">手术意外险</view>
+        <view class="product_list_box">
+            <ProductItem></ProductItem>
+            <ProductItem></ProductItem>
+            <ProductItem></ProductItem>
+            <ProductItem></ProductItem>
+            <ProductItem></ProductItem>
+            <ProductItem></ProductItem>
+        </view>
+    </view>
+</view>

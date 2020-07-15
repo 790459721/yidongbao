@@ -1,0 +1,22 @@
+<!--pages/clientManage/clientManage.wxml-->
+<view class="client_manage_wrapper">
+    <!-- 顶部搜索框 -->
+    <view class="client_search_box">
+        <view class="icon_search"></view>
+        <input class="client_search_input" type="text" placeholder="搜索客户名称"/>
+    </view>
+    <!-- 客户列表 -->
+    <view class="client_list">
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+        <ClientItem bind:goToClientMessage="goToClientMessage"></ClientItem>
+    </view>
+</view>

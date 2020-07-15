@@ -1,0 +1,9 @@
+<!--components/ProductItem/ProductItem.wxml-->
+<view class="product_box">
+    <view class="product_item_icon"></view>
+    <view class="product_item_detail">
+        <view class="product_item_title">消化内镜诊疗意外险</view>
+        <view class="product_item_desc">保手术意外，保麻醉意外，保因手术意外导致的残疾，还保因手术意外导致的相关并发症等</view>
+        <view class="product_item_btn">去投保</view>
+    </view>
+</view>

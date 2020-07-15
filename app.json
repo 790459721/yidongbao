@@ -1,0 +1,36 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/clientManage/clientManage",
+    "pages/clientMessage/clientMessage",
+    "pages/messageDetail/messageDetail",
+    "pages/myCenter/myCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "医董保",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/icons/icon_home.png",
+        "selectedIconPath": "/icons/icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/myCenter/myCenter",
+        "text": "个人中心",
+        "iconPath": "/icons/icon_my.png",
+        "selectedIconPath": "/icons/icon_my_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {}
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "ClientItem": "../../components/ClientItem/ClientItem"
+  },
+  "navigationBarTitleText": "客户管理"
+}

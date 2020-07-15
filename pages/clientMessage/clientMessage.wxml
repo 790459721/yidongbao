@@ -1,0 +1,13 @@
+<!--pages/clientMessage/clientMessage.wxml-->
+<view class="client_message_wrapper">
+    <view class="client_message_handle">
+        <view class="handle_cancle">取消</view>
+        <view class="handle_public">发布</view>
+    </view>
+    <view class="textarea_box">
+        <textarea class="input_message_content" placeholder="输入留言内容…" />
+    </view>
+    <view class="upload_image">
+        <view class="upload_icon_add"></view>
+    </view>
+</view>
