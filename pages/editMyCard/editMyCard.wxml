@@ -1,0 +1,89 @@
+<!-- pages/myCard/myCard.wxml -->
+<mp-toptips delay="{{1000}}" msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="my_card_wrapper">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells>
+            <mp-cell prop="name" ext-class="my-cells">
+                <view class="require_cell_title" slot="title"><span>*</span>姓名</view>
+                <input value="{{formData.name}}" bindinput="formInputChange" data-field="name" class="weui-input" placeholder="请输入姓名" />
+            </mp-cell>
+            <mp-cell 
+                link 
+                prop="avatar" 
+                ext-class="my-cells"
+                catch:tap="handleUploadAvatar"
+            >
+                <view class="require_cell_title" slot="title"><span>*</span>职业头像</view>
+                <view slot="footer">
+                    <image class="doctor_avatar" 
+                        mode="widthFix"
+                        src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_avatar.png">
+                    </image>
+                </view>
+            </mp-cell>
+            <mp-cell 
+                prop="hospitalName" 
+                ext-class="my-cells"
+            >
+                <view class="require_cell_title" slot="title"><span>*</span>医院名称</view>
+                <input value="{{formData.hospitalName}}" bindinput="formInputChange" data-field="hospitalName" class="weui-input" placeholder="请输入医院名称" />
+            </mp-cell>
+            <mp-cell 
+                link 
+                prop="department" 
+                ext-class="my-cells"
+                catch:tap="jumpToChooseDepartment"
+            >
+                <view class="require_cell_title" slot="title"><span>*</span>科室</view>
+                <view class="weui-cell__bd picker_jobTitle">
+                    <view wx:if="{{departmentValue}}" class="weui-select weui-select_in-select-after" >{{departmentValue}}</view>
+                    <view wx:else class="weui-select weui-select_in-select-after default_text">{{'请选择科室'}}</view>
+                </view>
+                  
+            </mp-cell>
+            <mp-cell 
+                link
+                prop="jobTitle" 
+                ext-class="my-cells"
+            >
+                <view class="require_cell_title" slot="title"><span>*</span>职称</view>
+                <view class="weui-cell__bd picker_jobTitle">
+                    <picker bindchange="bindJobTitleChange" range="{{jobTitleList}}" data-field="jobTitle">
+                        <view wx:if="{{JobTitleValue}}" class="weui-select weui-select_in-select-after" >{{JobTitleValue}}</view>
+                        <view wx:else class="weui-select weui-select_in-select-after default_text">{{'请选择职称'}}</view>
+                    </picker>
+                </view>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="submitForm">生成名片</button>
+    </view>
+
+    <!-- 选择科室 -->
+    <view wx:if="{{isShowDepartmentDailog}}" class="dialog_back" catchtouchmove="{{true}}">
+        <view class="dialog_scroll_left">
+            <scroll-view class="scroll_left" scroll-y="{{true}}">
+                <view 
+                    class="left_item {{currentIndex === index ? 'active' : ''}}"
+                    wx:for="{{departmentLeftList}}"
+                    wx:key="*this"
+                    catch:tap="handleMenuClick"
+                    data-index="{{index}}"
+                >
+                    <text class="item_text">{{item}}</text>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="dialog_scroll_right">
+            <scroll-view class="scroll_right" scroll-y="{{true}}">
+                <view class="right_item"
+                    wx:for="{{departmentRightContent}}"
+                    wx:key="*this"
+                    catch:tap="handleChooseDepartment"
+                    data-department="{{item}}"
+                >{{item.department}}</view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

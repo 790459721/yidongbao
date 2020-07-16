@@ -1,0 +1,78 @@
+/* pages/myCard/myCard.wxss */
+.mycard_container {
+    width: 100vw;
+    height: 100vh;
+    background: url(https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/mycard_back.png) no-repeat center;
+    background-size: 100% 100%;
+    .mycard_box {
+        width: 644rpx;
+        min-height: 876rpx;
+        border-radius: 20rpx;
+        background: #fff;
+        position: absolute;
+        top: 226rpx;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20rpx;
+        .mycard_avatar {
+            width: 230rpx;
+            height: 230rpx;
+            border-radius: 50%;
+            margin-top: -115rpx;
+            background: #ddd;
+        }
+        .edit_tag_box {
+            display: flex;
+            align-items: center;
+            color: #999;
+            font-size: 24rpx;
+            margin-top: 7rpx;
+            
+        }
+        .icon_edit {
+            width:27rpx;
+            height: 27rpx;
+            background: url(https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_pen.png) no-repeat center;
+            background-size: contain;
+            margin-left: 7rpx;
+        }
+        .user_name {
+            color: #333;
+            font-size: 46rpx;
+            letter-spacing: 10rpx;
+        }
+        .user_department {
+            color: #333;
+            font-size: 34rpx;
+        }
+        .user_job_title {
+            font-size: 34rpx;
+            color: #999;
+            margin-bottom: 10rpx;
+        }
+        .two_code {
+            width: 470rpx;
+            height: 470rpx;
+            background: #eee;
+        }
+        .mycard_desc {
+            font-size: 34rpx;
+            color: 333;
+            margin-top: 21rpx;
+        }
+        .no_info_box {
+            display: flex;
+            font-size: 26rpx;
+            color: #999;
+            margin: 55rpx 0;
+            .to_edit {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -11,8 +11,9 @@
 }
 .client_item_box .client_detail_block .client_item_avatar {
   width: 120rpx;
-  height: 128rpx;
+  height: 120rpx;
   margin-right: 27rpx;
+  border-radius: 50%;
 }
 .client_item_box .client_detail_block .client_detail_box .detail_top {
   display: flex;

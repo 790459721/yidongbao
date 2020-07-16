@@ -2,7 +2,7 @@
 <view class="client_item_box">
     <view class="client_detail_block">
         <!-- 头像 -->
-        <image class="client_item_avatar" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon2.png" />
+        <image class="client_item_avatar" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/home_nav_back.png" />
         <view class="client_detail_box">
             <view class="detail_top">
                 <view class="detail_name">李一一</view>

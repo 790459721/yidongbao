@@ -4,6 +4,9 @@
  * @Description: 
  */ 
 //index.js
+
+// const { jumpPage } = require("../../utils/jumpPage")
+import {jumpPage} from '../../utils/jumpPage'
 //获取应用实例
 const app = getApp()
 
@@ -65,9 +68,12 @@ Page({
             hasUserInfo: true
         })
     },
+    // 跳转客户管理
     goToClientManage() {
-        wx.navigateTo({
-            url: '/pages/clientManage/clientManage'
-        })
+        jumpPage('/pages/clientManage/clientManage')
+    },
+    // 跳转我的名片
+    goToMyCard() {
+        jumpPage('/pages/myCard/myCard')
     }
 })

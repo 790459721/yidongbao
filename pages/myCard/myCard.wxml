@@ -1,0 +1,26 @@
+<!--pages/myCard/myCard.wxml-->
+<view class="mycard_container">
+    <view class="mycard_box">
+        <view class="mycard_avatar"></view>
+        <block wx:if="{{hasInfo}}">
+            <view class="edit_tag_box" catch:tap="jumpMyCard">
+                <text>编辑</text>
+                <view class="icon_edit"></view>
+            </view>
+            <text class="user_name">李峰</text>
+            <text class="user_department">皮肤门诊科</text>
+            <text class="user_job_title">主任医师</text>
+        </block>
+        <block wx:else>
+            <view class="no_info_box" catch:tap="jumpMyCard">
+                <text>暂无基本信息，现在</text>
+                <view class="to_edit">
+                    <text>完善</text>
+                    <view class="icon_edit"></view>
+                </view>
+            </view>
+        </block>
+        <image class="two_code"></image>
+        <text class="mycard_desc">扫一扫 咨询详情</text>
+    </view>
+</view>

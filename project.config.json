@@ -78,6 +78,28 @@
 					"id": -1,
 					"name": "pages/messageDetail/messageDetail",
 					"pathName": "pages/messageDetail/messageDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/editMyCard/editMyCard",
+					"pathName": "pages/editMyCard/editMyCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/uiTest/uiTest",
+					"pathName": "pages/uiTest/uiTest",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的名片",
+					"pathName": "pages/myCard/myCard",
+					"query": "",
 					"scene": null
 				}
 			]
