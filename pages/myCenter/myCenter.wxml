@@ -1,2 +1,62 @@
 <!--pages/myCenter/myCenter.wxml-->
-<text>pages/myCenter/myCenter.wxml</text>
+<view class="mycenter_wrapper">
+    <!-- 个人信息部分 -->
+    <view class="mycenter_personal_info">
+        <view class="info_avatar">
+            <image class="info_avatar_img" src=""></image>
+        </view>
+        <view class="info_message">
+            <view class="info_top">
+               <text class="info_name">李峰</text> 
+               <text class="info_jobtitle">主任医师</text>
+            </view>
+            <view class="info_hospital">复旦大学附属华山医院</view>
+        </view>
+    </view>
+    <!-- 余额订单 -->
+    <view class="rest_money_box">
+        <view class="rest_money" catchtap="jumpToBalance">
+            <view class="num">1000.00</view>
+            <view class="text">账户余额(元)</view>
+        </view>
+        <view class="rest_money_split"></view>
+        <view class="my_ordered">
+            <view class="num">20</view>
+            <view class="text">完成订单(单)</view>
+        </view>
+    </view>
+    <!-- 我的专属 -->
+    <view class="mycenter_section_title">我的专属</view>
+    <view class="my_exclusive_box">
+        <view class="exclusive_item" catch:tap="jumpMyAlly">
+            <view class="exclusive_item_icon iconfont icon_fans"></view>
+            <view class="exclusive_item_name ">我的盟友</view>
+        </view>
+        <view class="exclusive_item" catch:tap="jumpAdvisory">
+            <view class="exclusive_item_icon iconfont icon_messages"></view>
+            <view class="exclusive_item_name">患者咨询</view>
+        </view>
+    </view>
+    <!-- 功能标签 -->
+    <view class="features_box">
+        <view class="features_tag">
+            <view class="features_tag_icon iconfont icon_customer"></view>
+            <view class="features_tag_name">在线客服</view>
+        </view>
+        <view class="features_tag_arrow_right iconfont icon_arrow_right"></view>
+    </view>
+    <view class="features_box">
+        <view class="features_tag">
+            <view class="features_tag_icon iconfont icon_phone"></view>
+            <view class="features_tag_name">电话联系</view>
+        </view>
+        <view class="features_tag_arrow_right iconfont icon_arrow_right"></view>
+    </view>
+    <view class="features_box">
+        <view class="features_tag">
+            <view class="features_tag_icon iconfont icon_about"></view>
+            <view class="features_tag_name">关于我们</view>
+        </view>
+        <view class="features_tag_arrow_right iconfont icon_arrow_right"></view>
+    </view>
+</view>

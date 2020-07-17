@@ -1,0 +1,132 @@
+/* pages/myAlly/myAlly.wxss */
+.myally_wrapper .myally_top_banner {
+  width: 100%;
+  height: 599rpx;
+  background: url(https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/ally_top_back.png) no-repeat center;
+  background-size: contain;
+}
+.myally_wrapper .myally_center_card {
+  width: 100%;
+  padding-bottom: 50rpx;
+  background: linear-gradient(360deg, #ff8584 100%, #fc6080 51%, #ffa492 100%);
+}
+.myally_wrapper .myally_center_card .center_card_back {
+  background: #FFD548;
+  width: 620rpx;
+  height: 341rpx;
+  border-radius: 16rpx;
+  margin: 0 auto;
+  border: 1rpx solid transparent;
+  margin-bottom: 75rpx;
+}
+.myally_wrapper .myally_center_card .center_card_back .center_card_white {
+  width: 582rpx;
+  height: 299rpx;
+  margin: 21rpx auto;
+  background: #FFF8F8;
+  border-radius: 16rpx;
+  border: 1rpx solid transparent;
+}
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info {
+  display: flex;
+  justify-content: space-around;
+}
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .center_card_info_split {
+  width: 2rpx;
+  height: 110rpx;
+  background: #ccc;
+}
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_invites,
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_joined {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_invites .invites_num,
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_joined .invites_num,
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_invites .joined_num,
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_joined .joined_num {
+  color: #333333;
+  font-size: 50rpx;
+  font-weight: 500rpx;
+  line-height: 70rpx;
+}
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_invites .invite_text,
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_joined .invite_text,
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_invites .joined_text,
+.myally_wrapper .myally_center_card .center_card_back .center_card_white .center_card_info .card_info_joined .joined_text {
+  color: #666;
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+.myally_wrapper .myally_center_card .myally_share_btn {
+  width: 620rpx;
+  height: 80rpx;
+  background: linear-gradient(180deg, #ffb700 0%, #ffda93 100%);
+  border-radius: 48rpx;
+  border: 2rpx solid rgba(5, 5, 5, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E12047;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.myally_wrapper .myally_center_card .myally_share_btn.wxshare {
+  margin-bottom: 47rpx;
+}
+.myally_wrapper .myally_center_card .myally_share_btn.m_to_m {
+  margin-bottom: 85rpx;
+}
+.myally_wrapper .myally_center_card .bottom_card_back {
+  background: #FFD548;
+  width: 620rpx;
+  border-radius: 16rpx;
+  margin: 0 auto;
+  border: 1rpx solid transparent;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white {
+  width: 582rpx;
+  margin: 21rpx auto;
+  background: #FFF8F8;
+  border-radius: 16rpx;
+  border: 1rpx solid transparent;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_search {
+  border: 1rpx solid #979797;
+  border-radius: 25rpx;
+  width: 500rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABRCAMAAACdUboEAAAAflBMVEUAAACxsbGysrKysrKysrKzs7O0tLSysrK2traysrKzs7OysrKysrKysrKzs7OysrKzs7OysrKysrKzs7OysrK0tLSysrKysrKzs7O0tLSzs7Ozs7OysrKysrKzs7OxsbGysrKysrKzs7Ozs7Onp6ezs7O1tbWxsbGvr6+ysrLyQ6C4AAAAKXRSTlMAgOTHoDIrmR67sqeHa0xjON3VlZFYRax1Jgr18dC0dnBWPBkJjBC3QLSEWpAAAAH4SURBVFjD7ZbbcoIwEEA33OSOIAKi9V7b/f8f7GRbZdRCNpiHzpTzys6ZDXtJYGJiYuJfcBSlUwfbaBGnJnSeKLDDiucv+twZPvJxeCU/8j1hZ2OF8xx7cMYJq5vgTSTLKs120fqW5hihuOr2HlxplyF+s9YXJkhYzRnuSH+cga7wgETk9ybfaFbZQsn7UPpLLeMMJXXP1xQlxUWnsRUF3aFE6KZoraAXKs/GYwtXKGmUvVqyjXvqwzMM4MiQnG18k+HJ8ISi5KhVlxUMQjsu5s4fZ3IXOuNdclrjk9qBaXQUv5E4oYRprFkztpFRPs8YyNgKFNgyinnrbGVsCgpowbs8YyRjVXfJGTVOTY2xU+07MrY8Y0y7Vj2p/O5J6SJpGeWrgYlF7cNYT3sAjWOHjJvSZV/9qOqfEx1jBmw+KElDKRIHxT1yRMkCNLBxaFtckPB1jBkO/Eof747A32h9k3PAce8UG4mweqyyQBypXOM3zhw6fGFhx1ZTGeAPxeLzJLeNl23xnlBT2WDHxs7xF2pN5bLAX3kP8EqkqbyIDT4xWwGE45/kXpk/+FyQRCOVxDG2LSRyJ3EfGpb2xSj8ueu3zy9CznzzKW/K0pQy7opvStkNZGxeKcwrM/PKyriyAdPKDAwrCw/MkViIkQcmaV0fJiYm/hRfy+p1Wbrf4jMAAAAASUVORK5CYII=) no-repeat;
+  background-size: contain;
+  background-position: 168rpx center ;
+  padding-left: 220rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  margin-bottom: 30rpx;
+}
+.myally_wrapper .card_top_tag {
+  background: #ff7b7d;
+  box-shadow: 0rpx 2rpx 4rpx 1rpx rgba(255, 128, 128, 0.5);
+  border-radius: 27rpx;
+  width: 291rpx;
+  height: 53rpx;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25rpx;
+  margin: 39rpx auto 55rpx;
+}
+.myally_wrapper .card_top_tag .card_top_split {
+  width: 22rpx;
+  height: 4rpx;
+  background: linear-gradient(180deg, #ffffff 0%, #ffcecf 100%);
+  border-radius: 2rpx;
+}

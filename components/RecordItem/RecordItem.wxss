@@ -1,0 +1,73 @@
+/* components/RecordItem/RecordItem.wxss */
+@font-face {
+  font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1949728_7n7orpa2bv2.eot?t=1594966318694');
+  /* IE9 */
+  src: url('//at.alicdn.com/t/font_1949728_7n7orpa2bv2.eot?t=1594966318694#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'), url('//at.alicdn.com/t/font_1949728_7n7orpa2bv2.woff?t=1594966318694') format('woff'), url('//at.alicdn.com/t/font_1949728_7n7orpa2bv2.ttf?t=1594966318694') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ url('//at.alicdn.com/t/font_1949728_7n7orpa2bv2.svg?t=1594966318694#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon_level1:before {
+  content: "\e6e0";
+}
+.icon_level2:before {
+  content: "\e6b0";
+}
+.icon_qiandai:before {
+  content: "\e665";
+}
+/* .icon_level1:before {
+    content: "\e64d";
+  } */
+.icon_fans:before {
+  content: "\e64b";
+}
+.icon_messages:before {
+  content: "\e6a6";
+}
+.icon_arrow_right:before {
+  content: "\e60c";
+}
+.icon_customer:before {
+  content: "\e65a";
+}
+.icon_about:before {
+  content: "\e656";
+}
+.icon_phone:before {
+  content: "\e600";
+}
+.record_item_container {
+  display: flex;
+  padding: 31rpx 24rpx 22rpx 0;
+  border-bottom: 1rpx solid #ccc;
+  justify-content: space-between;
+}
+.record_item_container .left_block {
+  display: flex;
+}
+.record_item_container .left_block .record_level {
+  color: #EBB22E;
+  font-size: 36rpx;
+}
+.record_item_container .left_block .record_item_desc {
+  color: #999;
+  font-size: 28rpx;
+  margin-left: 13rpx;
+}
+.record_item_container .left_block .record_item_desc .item_edsc text {
+  color: #333;
+  font-weight: 500;
+}
+.record_item_container .record_amount {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 42rpx;
+}

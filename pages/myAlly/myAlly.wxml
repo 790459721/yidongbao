@@ -1,0 +1,46 @@
+<!-- pages/myAlly/myAlly.wxml -->
+<view class="myally_wrapper">
+    <view class="myally_top_banner"></view>
+    <view class="myally_center_card">
+        <!-- 关于盟友card -->
+        <view class="center_card_back">
+            <view class="center_card_white">
+                <view class="card_top_tag">
+                    <view class="card_top_split"></view>
+                    <view class="card_top_title">关于医董保</view>
+                    <view class="card_top_split"></view>
+                </view>
+                <view class="center_card_info">
+                    <view class="card_info_invites">
+                        <view class="invites_num">30</view>
+                        <view class="invite_text">邀请人数（人）</view>
+                    </view>
+                    <view class="center_card_info_split"></view>
+                    <view class="card_info_joined">
+                        <view class="joined_num">25</view>
+                        <view class="joined_text">已加入（人）</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="myally_share_btn wxshare">微信分享</view>
+        <view class="myally_share_btn m_to_m">面对面分享</view>
+        <!-- 我的盟友card -->
+        <view class="bottom_card_back">
+            <view class="bottom_card_white">
+                <view class="card_top_tag">
+                    <view class="card_top_split"></view>
+                    <view class="card_top_title">我的盟友</view>
+                    <view class="card_top_split"></view>
+                </view>
+                <input type="text" class="ally_search" placeholder="搜索盟友名称"/>
+                <view>
+                    <scroll-view class="">
+                        
+                    </scroll-view>
+                      
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

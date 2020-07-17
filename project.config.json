@@ -23,7 +23,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -100,6 +100,40 @@
 					"name": "我的名片",
 					"pathName": "pages/myCard/myCard",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myCenter/myCenter",
+					"pathName": "pages/myCenter/myCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/balance/balance",
+					"pathName": "pages/balance/balance",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "患者咨询列表",
+					"pathName": "pages/advisory/advisory",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "咨询详情",
+					"pathName": "pages/advisoryDetail/advisoryDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的盟友",
+					"pathName": "pages/myAlly/myAlly",
 					"scene": null
 				}
 			]

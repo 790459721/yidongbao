@@ -1,0 +1,16 @@
+<!--pages/advisory/advisory.wxml-->
+<view class="advisory_list_wrapper">
+    <view wx:for="{{5}}" class="advisory_item" catch:tap="jumpToAdvisoryDetail">
+        <view class="item_left">
+            <image src="" class="item_user_avatar"></image>
+            <view class="item_center">
+                <text class="item_name">朱士琴 </text>
+                <text class="item_content">医生我想问你一些问题，医生我想问你一些问题，请问怎么吃才健康</text>
+            </view>
+        </view>
+        <view class="item_right">
+            <view class="item_time">07-09</view>
+            <view class="item_num">1</view>
+        </view>
+    </view>
+</view>

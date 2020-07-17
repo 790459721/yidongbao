@@ -6,8 +6,11 @@
     "pages/messageDetail/messageDetail",
     "pages/myCenter/myCenter",
     "pages/editMyCard/editMyCard",
-    "pages/uiTest/uiTest",
-    "pages/myCard/myCard"
+    "pages/myCard/myCard",
+    "pages/advisory/advisory",
+    "pages/advisoryDetail/advisoryDetail",
+    "pages/balance/balance",
+    "pages/myAlly/myAlly"
   ],
   "window": {
     "backgroundTextStyle": "light",

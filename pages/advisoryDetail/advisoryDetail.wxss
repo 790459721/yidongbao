@@ -1,0 +1,63 @@
+/* pages/advisoryDetail/advisoryDetail.wxss */
+.advisory_detail_wrapper {
+  width: 100vw;
+  padding: 0 25rpx;
+}
+.advisory_detail_wrapper .detail_patient_info {
+  display: flex;
+  align-items: center;
+  margin: 28rpx 0;
+}
+.advisory_detail_wrapper .detail_patient_info .patient_avatar {
+  width: 100rpx;
+  height: 100rpx;
+  background: #eee;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.advisory_detail_wrapper .detail_patient_info .info_box .patient_name {
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 42rpx;
+  margin-bottom: 13rpx;
+}
+.advisory_detail_wrapper .detail_patient_info .info_box .create_time {
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 33rpx;
+}
+.advisory_detail_wrapper .advisory_detail_content {
+  padding-bottom: 20rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.advisory_detail_wrapper .advisory_detail_images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.advisory_detail_wrapper .advisory_detail_images .detail_images {
+  width: 220rpx;
+  height: 220rpx;
+  background: #399;
+  margin-bottom: 20rpx;
+}
+.advisory_detail_wrapper .advisory_detail_images::after {
+  content: '';
+  width: 31%;
+}
+.advisory_detail_wrapper .advisory_detail_return {
+  background: #F5F6FA;
+  width: 700rpx;
+  height: 54rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 12rpx;
+  color: #BBBBC3;
+  line-height: 40rpx;
+}
+.advisory_detail_wrapper .advisory_detail_return .detail_return_input {
+  padding-left: 20rpx;
+  width: 600rpx;
+}

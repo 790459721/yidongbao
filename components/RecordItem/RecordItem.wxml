@@ -1,0 +1,16 @@
+<!--components/RecordItem/RecordItem.wxml-->
+<view class="record_item_container">
+    <view class="left_block">
+        <view class="record_level iconfont icon_level{{icon}}"></view>
+        <view class="record_item_desc">
+            <view wx:if="{{icon === 1}}" class="item_edsc">
+                来自客户<text>张苟子</text>的购买
+            </view>
+            <view wx:else class="item_edsc">
+                来自<text>张苟子</text>下的客户购买
+            </view>
+            <view class="record_time">2020.07.06</view>
+        </view>
+    </view>
+    <view class="record_amount">+100</view>
+</view>

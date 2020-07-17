@@ -1,0 +1,32 @@
+<!--pages/balance/balance.wxml-->
+<view class="balance_wrapper">
+    <!-- 头部banner -->
+    <view class="balance_banner">
+        <view class="balance_num">1000.00</view>
+        <view class="balance_text">账户余额(元)</view>
+    </view>
+    <view class="record_tab_container">
+        <text 
+            class="tab_item {{listType === 'transaction' ? 'active': ''}}"  
+            data-tab="transaction"
+            catch:tap="handleTabChange"
+        >交易记录</text>
+        <text 
+        class="tab_item {{listType === 'withdraw' ? 'active': ''}}"  data-tab="withdraw"
+        catch:tap="handleTabChange"
+        >提现记录</text>
+    </view>
+    <view class="record_list">
+        <block wx:if="{{listType === 'transaction'}}" >
+            <RecordItem listType="{{listType}}" icon="{{1}}"></RecordItem>
+            <RecordItem listType="{{listType}}" icon="{{2}}"></RecordItem>
+        </block>
+        <block wx:else>
+            <WithdrawItem listType="{{listType}}"></WithdrawItem>
+            <WithdrawItem listType="{{listType}}"></WithdrawItem>
+        </block>
+    </view>
+    <view class="withdraw_btn">
+        申请提现(可提现：1000元)
+    </view>
+</view>

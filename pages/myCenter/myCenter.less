@@ -1,0 +1,129 @@
+/* pages/myCenter/myCenter.wxss */
+.mycenter_wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0 30rpx;
+    .mycenter_personal_info {
+        padding: 42rpx 0;
+        display: flex;
+        align-items: center;
+        .info_avatar {
+            width: 110rpx;
+            height: 110rpx;
+            margin-right: 19rpx;
+            .info_avatar_img {
+                width: 110rpx;
+                height: 110rpx;
+                border-radius: 50%;
+                background: #999;
+            }
+        }
+        .info_message {
+          .info_top {
+              display: flex;
+              margin-bottom: 13rpx;
+              align-items: flex-end;
+              .info_name {
+                font-size: 46rpx;
+                color: #333;
+                font-weight: 500;
+                line-height: 65rpx;
+                margin-right: 16rpx;
+              }
+              .info_jobtitle {
+                color: #999;
+                font-size: 32rpx;
+                line-height: 45rpx;
+              }
+          }  
+          .info_hospital {
+              font-size: 32rpx;
+              color: #999;
+              line-height: 42rpx;
+          }
+        }
+    }
+    .rest_money_box {
+        height: 213rpx;
+        width: 690rpx;
+        background:linear-gradient(180deg,rgba(45,209,161,1) 0%,rgba(125,214,148,1) 100%);
+        border-radius:10rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        .rest_money_split {
+            width: 2rpx;
+            height: 149rpx;
+            // margin: 0 ;
+            background: #fff;
+        }
+        .rest_money, .my_ordered {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .num {
+                font-size: 42rpx;
+                line-height: 59rpx;
+                margin-bottom: 18rpx;
+            }
+            .text {
+                font-size: 28rpx;
+                line-height: 40rpx;
+            }
+        }
+    }
+    .mycenter_section_title {
+        font-size:38rpx;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        line-height:53rpx;
+        margin-top: 40rpx;
+    }
+    .my_exclusive_box {
+        display: flex;
+        padding: 32rpx 0 32rpx 36rpx;
+        border-bottom: 10rpx solid #f9f9f9;
+        .exclusive_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 105rpx;
+            .exclusive_item_icon {
+                font-size: 58rpx;
+                &.icon_fans {
+                    color: #70D6ED;
+                }
+                &.icon_messages {
+                    color: #B39FF8;
+                }
+            }
+        }
+    }
+    .features_box {
+        display: flex;
+        justify-content: space-between;
+        height: 99rpx;
+        align-items: center;
+        border-bottom: 1rpx solid #ccc;
+        .features_tag {
+            display: flex;
+            align-items: center;
+            .features_tag_icon {
+                font-size: 30rpx;
+                margin-right: 12rpx;
+                color: #666;
+            }
+            .features_tag_name {
+                color: #666;
+                font-size: 28rpx;
+                line-height: 40rpx;
+            }
+        }
+        .features_tag_arrow_right {
+            color: #ccc;
+        }
+    }
+}

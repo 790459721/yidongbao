@@ -1,1 +1,129 @@
 /* pages/myCenter/myCenter.wxss */
+.mycenter_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 30rpx;
+}
+.mycenter_wrapper .mycenter_personal_info {
+  padding: 42rpx 0;
+  display: flex;
+  align-items: center;
+}
+.mycenter_wrapper .mycenter_personal_info .info_avatar {
+  width: 110rpx;
+  height: 110rpx;
+  margin-right: 19rpx;
+}
+.mycenter_wrapper .mycenter_personal_info .info_avatar .info_avatar_img {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background: #999;
+}
+.mycenter_wrapper .mycenter_personal_info .info_message .info_top {
+  display: flex;
+  margin-bottom: 13rpx;
+  align-items: flex-end;
+}
+.mycenter_wrapper .mycenter_personal_info .info_message .info_top .info_name {
+  font-size: 46rpx;
+  color: #333;
+  font-weight: 500;
+  line-height: 65rpx;
+  margin-right: 16rpx;
+}
+.mycenter_wrapper .mycenter_personal_info .info_message .info_top .info_jobtitle {
+  color: #999;
+  font-size: 32rpx;
+  line-height: 45rpx;
+}
+.mycenter_wrapper .mycenter_personal_info .info_message .info_hospital {
+  font-size: 32rpx;
+  color: #999;
+  line-height: 42rpx;
+}
+.mycenter_wrapper .rest_money_box {
+  height: 213rpx;
+  width: 690rpx;
+  background: linear-gradient(180deg, #2dd1a1 0%, #7dd694 100%);
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+}
+.mycenter_wrapper .rest_money_box .rest_money_split {
+  width: 2rpx;
+  height: 149rpx;
+  background: #fff;
+}
+.mycenter_wrapper .rest_money_box .rest_money,
+.mycenter_wrapper .rest_money_box .my_ordered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mycenter_wrapper .rest_money_box .rest_money .num,
+.mycenter_wrapper .rest_money_box .my_ordered .num {
+  font-size: 42rpx;
+  line-height: 59rpx;
+  margin-bottom: 18rpx;
+}
+.mycenter_wrapper .rest_money_box .rest_money .text,
+.mycenter_wrapper .rest_money_box .my_ordered .text {
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.mycenter_wrapper .mycenter_section_title {
+  font-size: 38rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 53rpx;
+  margin-top: 40rpx;
+}
+.mycenter_wrapper .my_exclusive_box {
+  display: flex;
+  padding: 32rpx 0 32rpx 36rpx;
+  border-bottom: 10rpx solid #f9f9f9;
+}
+.mycenter_wrapper .my_exclusive_box .exclusive_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 105rpx;
+}
+.mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon {
+  font-size: 58rpx;
+}
+.mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon.icon_fans {
+  color: #70D6ED;
+}
+.mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon.icon_messages {
+  color: #B39FF8;
+}
+.mycenter_wrapper .features_box {
+  display: flex;
+  justify-content: space-between;
+  height: 99rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+.mycenter_wrapper .features_box .features_tag {
+  display: flex;
+  align-items: center;
+}
+.mycenter_wrapper .features_box .features_tag .features_tag_icon {
+  font-size: 30rpx;
+  margin-right: 12rpx;
+  color: #666;
+}
+.mycenter_wrapper .features_box .features_tag .features_tag_name {
+  color: #666;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.mycenter_wrapper .features_box .features_tag_arrow_right {
+  color: #ccc;
+}

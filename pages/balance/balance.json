@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "RecordItem": "../../components/RecordItem/RecordItem",
+      "WithdrawItem": "../../components/WithdrawItem/WithdrawItem"
+  },
+  "navigationBarTitleText": "账户余额"
+}

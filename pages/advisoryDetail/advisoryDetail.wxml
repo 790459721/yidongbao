@@ -1,0 +1,22 @@
+<!--pages/advisoryDetail/advisoryDetail.wxml-->
+<view class="advisory_detail_wrapper">
+    <view class="detail_patient_info">
+        <image class="patient_avatar" src=""></image>
+        <view class="info_box">
+            <view class="patient_name">朱士琴 </view>
+            <view class="create_time">07-09</view>
+        </view>
+    </view>
+    <view class="advisory_detail_content">
+        <text>医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题</text>
+    </view>
+    <view class="advisory_detail_images">
+        <image wx:for="{{5}}" class="detail_images" src=""></image>
+    </view>
+    <view class="advisory_detail_return">
+        <text>回复:</text>
+        <input class="detail_return_input" type="text"
+            bindconfirm="handleInputComplete"
+        />
+    </view>
+</view>
