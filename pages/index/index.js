@@ -15,7 +15,8 @@ Page({
         motto: 'Hello World',
         userInfo: {},
         hasUserInfo: false,
-        canIUse: wx.canIUse('button.open-type.getUserInfo')
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        platform: 0
     },
     //事件处理函数
     bindViewTap: function () {
@@ -24,6 +25,11 @@ Page({
         })
     },
     onLoad: function () {
+        if(app.globalData.platform) {
+            this.setData({
+                platform: app.globalData.platform
+            })
+        }
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,

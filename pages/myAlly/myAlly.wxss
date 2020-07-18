@@ -109,6 +109,57 @@
   line-height: 50rpx;
   margin-bottom: 30rpx;
 }
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list {
+  height: 650rpx;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item {
+  padding: 0 22rpx;
+  border-bottom: 1rpx solid #ccc;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item .list_item_left {
+  display: flex;
+  align-items: center;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item .list_item_left .left_avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #ccc;
+  margin-right: 10rpx;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item .list_item_left .left_ally_info .ally_info_top {
+  display: flex;
+  align-items: center;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item .list_item_left .left_ally_info .ally_info_top .info_name {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #666666;
+  margin-right: 20rpx;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item .list_item_left .left_ally_info .ally_info_top .info_tag {
+  width: 57rpx;
+  height: 25rpx;
+  border-radius: 2rpx;
+  border: 1rpx solid #ff7b7d;
+  color: #FF7B7D;
+  font-size: 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item .list_item_left .left_ally_info .ally_info_bottom {
+  font-size: 24rpx;
+  color: #999999;
+}
+.myally_wrapper .myally_center_card .bottom_card_back .bottom_card_white .ally_list .ally_list_item .list_item_right {
+  color: #ccc;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
 .myally_wrapper .card_top_tag {
   background: #ff7b7d;
   box-shadow: 0rpx 2rpx 4rpx 1rpx rgba(255, 128, 128, 0.5);

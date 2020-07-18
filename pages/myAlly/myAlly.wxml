@@ -35,10 +35,128 @@
                 </view>
                 <input type="text" class="ally_search" placeholder="搜索盟友名称"/>
                 <view>
-                    <scroll-view class="">
-                        
+                    <scroll-view class="ally_list" scroll-y="{{true}}">
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
+                        <view class="ally_list_item">
+                            <view class="list_item_left">
+                                <image class="left_avatar" src=""></image>
+                                <view class="left_ally_info">
+                                    <view class="ally_info_top">
+                                        <view class="info_name">朱丽丽</view>
+                                        <view class="info_tag">助理</view>
+                                    </view>
+                                    <view class="ally_info_bottom">
+                                        2020-07-06  15:30
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="list_item_right iconfont icon_caozuo"></view>
+                        </view>                        
                     </scroll-view>
-                      
                 </view>
             </view>
         </view>

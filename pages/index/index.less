@@ -11,7 +11,7 @@
         position: relative;
         .home_banner {
             width: 708rpx;
-            height: 282rpx;
+            height: 339rpx;
             background: #369;
             border-radius: 10rpx;
             position: absolute;
@@ -24,11 +24,11 @@
     }
     .home_main {
         padding: 0 20rpx;
-        margin-top: 78rpx;
+        margin-top: 128rpx;
     }
    .module_title {
        height: 92rpx;
-       background:linear-gradient(180deg,rgba(249,217,204,0.97) 0%,rgba(248,249,250,1) 100%);
+       background:linear-gradient(180deg,rgba(255,199,199,1) 0%,rgba(248,249,250,1) 100%);
         border-radius:20rpx 20rpx 0rpx 0rpx;
         display: flex;
         align-items: center;
@@ -40,6 +40,9 @@
             margin-top: 55rpx;
             background:linear-gradient(180deg,rgba(208,250,238,1) 0%,rgba(248,249,250,1) 100%);
             color: #33C29D;
+        }
+        &.my_doctor {
+            background:linear-gradient(180deg,rgba(250,242,223,0.97) 0%,rgba(248,249,250,1) 100%);
         }
    }
    .services_project_box {
@@ -88,6 +91,156 @@
            background: #f7f7f7;
        }
    }
+
+   .my_doctor_box {
+        background: #fff;
+        display: flex;
+        height:283rpx;
+        background:rgba(255,255,255,1);
+        border-radius:0rpx 0rpx 10rpx 10rpx;
+        padding: 45rpx 17rpx;
+        // align-items: center;
+        // justify-content: space-around;
+    .my_doctor_left {
+        margin-right: 27rpx;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .doctor_avatar {
+            width:120rpx;
+            height:128rpx;
+            border-radius: 10rpx;
+            background: #ccc;
+            margin-bottom: 20rpx;
+        }
+        .message_btn {
+            width:120rpx;
+            height:45rpx;
+            background:rgba(90,222,183,1);
+            border-radius:22rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 28rpx;
+        }
+    }
+    .my_doctor_right {
+        .right_top {
+            width: 520rpx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .right_top_left {
+                display: flex;
+                align-items: center;
+                .doctor_name {
+                    font-size:46rpx;
+                    font-weight:500;
+                    color:rgba(51,51,51,1);
+                    line-height:65rpx;
+                    color: #333;
+                    margin-right: 27rpx;
+                }
+                .doctor_job_title {
+                    font-size:28rpx;
+                    color:rgba(153,153,153,1);
+                    line-height:40rpx;
+                }
+            }
+            .like_state {
+                width:140rpx;
+                height:45rpx;
+                border-radius:23rpx;
+                border:2rpx solid rgba(153,153,153,1);
+                display: flex;
+                align-items: center;
+                padding-left: 13rpx;
+                .like_icon {
+                    font-size: 26rpx;
+                    color: #999999;
+                    margin-right: 12rpx;
+                }
+                .like_text {
+                    font-size:26rpx;
+                    color:rgba(153,153,153,1);
+                }
+            }
+        }
+        .right_center {
+            margin: 1rpx 0 14rpx;
+            display: flex;
+            font-size:28rpx;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:40rpx;
+            .right_center_hospital {
+                margin-right: 20rpx;
+            }
+        }
+        .right_bottom {
+            display: flex;
+            align-items: center;
+            .bottom_tag {
+                width:160rpx;
+                height:44rpx;
+                border-radius:4rpx;
+                border:1rpx solid rgba(204,204,204,1);
+                display: flex;
+                align-items: center;
+                margin-right: 46rpx;
+                .tag_point {
+                    font-size: 20rpx;
+                    color: #33C29D;
+                    margin: 0 17rpx 0 11rpx;
+                }
+                .tag_text {
+                    font-size:26rpx;
+                    color:rgba(153,153,153,1);
+                }
+            }
+            .bottom_star_icon {
+                font-size: 30rpx;
+                color: #5ADEB7;
+                margin-right: 11rpx;
+            }
+            .bottom_star_num {
+                margin-right: 12rpx;
+                font-size:26rpx;
+                font-family:ZhenyanGB-Regular,ZhenyanGB;
+                font-weight:700;
+                color:rgba(246,182,49,1);
+            }
+            .message_num {
+                font-size:26rpx;
+                color:rgba(153,153,153,1);
+            }
+        }
+    }
+   }
+   .empty_box {
+       width: 100%;
+       height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #999999;
+        .empty_icon {
+            width: 81rpx;
+            height: 81rpx;
+            background: #ccc;
+            margin-bottom: 34rpx;
+        }
+        .empty_message {
+            font-size:28rpx;
+            font-weight:500;
+            text {
+                color: #33C29D;
+            }
+        }
+   }
+
    .product_list_box {
        background: #fff;
        padding: 0 30rpx;

@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-07-18 18:20:51
+ * @LastEditTime: 2020-07-18 20:34:27
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \yidongbao\app.js
+ */ 
 //app.js
 App({
   onLaunch: function () {
@@ -34,6 +42,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    platform: 2 //  0: 初始 1:医生 2:患者 3:普通用户
   }
 })
