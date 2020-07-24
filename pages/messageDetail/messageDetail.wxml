@@ -1,2 +1,45 @@
-<!--pages/messageDetail/messageDetail.wxml-->
-<text>留言详情</text>
+<!-- pages/messageDetail/messageDetail.wxml -->
+<view class="messageDetail_wrapper">
+    <block wx:for="{{commentArray}}">
+        <view class="messageDetail_client_box">
+            <view class="client_detail_block">
+                <!-- 头像 -->
+                <image class="client_avatar" src="{{item.headUrl || 'https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/default_avatar.png'}}" />
+                <view class="client_detail_box">
+                    <view class="detail_top">
+                        <view class="detail_name">{{item.name}}</view>
+                        <view class="detail_sex {{item.gender === 'MALE' ? 'male' : ''}}">
+                            {{item.gender === 'MALE' ? '男' : '女'}}
+                        </view>
+                        <view class="detail_id">ID：{{item.customerNo}}</view>
+                    </view>
+                    <view class="detail_phone">{{item.mobile}}</view>
+                    <view class="detail_create_time">创建时间：{{item.gmtCreate}}</view>
+                </view>
+            </view>
+            <view class="detail_message_btn" catch:tap="goToClientMessage">
+                留言
+            </view>
+        </view>
+        <view class="message_list_box" wx:if="{{!!item.commentSubArray.length}}">
+            <view class="message_icon_message iconfont icon_message"></view>
+            <view class="message_item_box" wx:for="{{item.commentSubArray}}" wx:key="id">
+                <image class="person_avatar" src="{{item.headUrl || 'https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/default_avatar.png'}}"></image>
+                <view class="person_info">
+                    <view class="info_top">
+                        <view class="top_left">
+                            <text class="name">{{item.name}}</text>
+                            <text class="jobtitle">{{item.title}}</text>
+                        </view>
+                        <view class="top_right">
+                            <text>{{item.gmtCreate}}</text>
+                        </view>
+                    </view>
+                    <view class="bottom_content">
+                        <text>{{item.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

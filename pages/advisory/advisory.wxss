@@ -40,7 +40,10 @@
   line-height: 37rpx;
 }
 .advisory_list_wrapper .advisory_item .item_right {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .advisory_list_wrapper .advisory_item .item_right .item_time {
   color: #999999;
@@ -58,4 +61,7 @@
   align-items: center;
   color: #fff;
   font-size: 22rpx;
+}
+.advisory_list_wrapper .advisory_item .item_right .item_num.num_no {
+  background: transparent;
 }

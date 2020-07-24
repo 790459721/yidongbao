@@ -1,13 +1,19 @@
 <!--pages/clientMessage/clientMessage.wxml-->
 <view class="client_message_wrapper">
     <view class="client_message_handle">
-        <view class="handle_cancle">取消</view>
-        <view class="handle_public">发布</view>
+        <view class="handle_cancle" catch:tap="handleCancel">取消</view>
+        <view class="handle_public" catch:tap="handleSubmit">发布</view>
     </view>
     <view class="textarea_box">
-        <textarea class="input_message_content" placeholder="输入留言内容…" />
+        <textarea value="{{content}}" class="input_message_content" placeholder="输入留言内容…" bindinput="handleContentChange"/>
     </view>
-    <view class="upload_image">
+    <block wx:if="{{tempFilePaths.length > 0}}">
+        <view class="image_list_box">
+            <image wx:for="{{tempFilePaths}}" wx:key="index" src="{{item}}" class="show_image">
+            </image>
+        </view>
+    </block>
+    <view wx:if="{{imageCount > 0}}" class="upload_image"  catch:tap="joinImages">
         <view class="upload_icon_add"></view>
     </view>
 </view>

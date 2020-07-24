@@ -25,7 +25,6 @@
   height: 230rpx;
   border-radius: 50%;
   margin-top: -115rpx;
-  background: #ddd;
 }
 .mycard_container .mycard_box .edit_tag_box {
   display: flex;
@@ -58,7 +57,9 @@
 .mycard_container .mycard_box .two_code {
   width: 470rpx;
   height: 470rpx;
-  background: #eee;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .mycard_container .mycard_box .mycard_desc {
   font-size: 34rpx;

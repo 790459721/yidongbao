@@ -1,0 +1,211 @@
+/* pages/doctorDetail/doctorDetail.wxss */
+.doctor_detail_wrapper {
+  padding: 0 30rpx 57rpx;
+  min-height: 100vh;
+  background: linear-gradient(177deg, #ffffff 0%, #effcf7 76%, #fbfffe 100%);
+}
+.doctor_detail_wrapper .my_doctor_box {
+  background: #fff;
+  display: flex;
+  background: #ffffff;
+  padding: 45rpx 17rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_left {
+  margin-right: 27rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_left .doctor_avatar {
+  width: 120rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 20rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_left .message_btn {
+  width: 120rpx;
+  height: 45rpx;
+  background: #5adeb7;
+  border-radius: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 28rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_top {
+  width: 520rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_top .right_top_left {
+  display: flex;
+  align-items: center;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_top .right_top_left .doctor_name {
+  font-size: 46rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 65rpx;
+  color: #333;
+  margin-right: 27rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_top .right_top_left .doctor_job_title {
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 40rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_top .like_state {
+  width: 140rpx;
+  height: 45rpx;
+  border-radius: 23rpx;
+  border: 2rpx solid #33C29D;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_top .like_state .like_icon {
+  font-size: 26rpx;
+  color: #33C29D;
+  margin-right: 12rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_top .like_state .like_text {
+  font-size: 26rpx;
+  color: #33C29D;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_center {
+  margin: 1rpx 0 14rpx;
+  display: flex;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 40rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_center .right_center_hospital {
+  margin-right: 20rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_bottom {
+  display: flex;
+  align-items: center;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_bottom .bottom_tag {
+  width: 160rpx;
+  height: 44rpx;
+  border-radius: 4rpx;
+  border: 1rpx solid #cccccc;
+  display: flex;
+  align-items: center;
+  margin-right: 46rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_bottom .bottom_tag .tag_point {
+  font-size: 20rpx;
+  color: #33C29D;
+  margin: 0 17rpx 0 11rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_bottom .bottom_tag .tag_text {
+  font-size: 26rpx;
+  color: #999999;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_bottom .bottom_star_icon {
+  font-size: 30rpx;
+  color: #5ADEB7;
+  margin-right: 11rpx;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_bottom .bottom_star_num {
+  margin-right: 12rpx;
+  font-size: 26rpx;
+  font-family: ZhenyanGB-Regular, ZhenyanGB;
+  font-weight: 700;
+  color: #f6b631;
+}
+.doctor_detail_wrapper .my_doctor_box .my_doctor_right .right_bottom .message_num {
+  font-size: 26rpx;
+  color: #999999;
+}
+.doctor_detail_wrapper .interactive_box {
+  margin: 43rpx auto 0;
+  width: 677rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0rpx 2rpx 5rpx 1rpx #efefef;
+  padding: 34rpx 26rpx 111rpx;
+}
+.doctor_detail_wrapper .interactive_box .interactive_title_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 41rpx;
+}
+.doctor_detail_wrapper .interactive_box .interactive_title_box .interactive_split {
+  width: 90rpx;
+  height: 1rpx;
+  background: #ccc;
+}
+.doctor_detail_wrapper .interactive_box .interactive_title_box .interactive_title {
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 48rpx;
+  margin: 0 28rpx;
+}
+.doctor_detail_wrapper .interactive_box .detail_patient_info {
+  display: flex;
+  align-items: center;
+  margin: 28rpx 0 0;
+}
+.doctor_detail_wrapper .interactive_box .detail_patient_info .patient_avatar {
+  width: 100rpx;
+  height: 100rpx;
+  background: #eee;
+  border-radius: 50%;
+  margin-right: 15rpx;
+}
+.doctor_detail_wrapper .interactive_box .detail_patient_info .info_box .patient_name {
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 42rpx;
+  margin-bottom: 13rpx;
+}
+.doctor_detail_wrapper .interactive_box .detail_patient_info .info_box .create_time {
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 33rpx;
+}
+.doctor_detail_wrapper .interactive_box .advisory_detail_content {
+  padding-bottom: 20rpx;
+  color: #333;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.doctor_detail_wrapper .interactive_box .advisory_detail_images {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.doctor_detail_wrapper .interactive_box .advisory_detail_images .detail_images {
+  width: 195rpx;
+  height: 195rpx;
+  background: #399;
+  margin-bottom: 20rpx;
+}
+.doctor_detail_wrapper .interactive_box .advisory_detail_images::after {
+  content: '';
+  width: 31%;
+}
+.doctor_detail_wrapper .interactive_box .advisory_detail_return {
+  background: #F5F6FA;
+  width: 623rpx;
+  height: 54rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 12rpx;
+  color: #BBBBC3;
+  line-height: 40rpx;
+}
+.doctor_detail_wrapper .interactive_box .advisory_detail_return .detail_return_input {
+  padding-left: 20rpx;
+  width: 600rpx;
+}

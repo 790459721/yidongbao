@@ -10,7 +10,14 @@
     "pages/advisory/advisory",
     "pages/advisoryDetail/advisoryDetail",
     "pages/balance/balance",
-    "pages/myAlly/myAlly"
+    "pages/myAlly/myAlly",
+    "pages/patientCard/patientCard",
+    "pages/goodDoctors/goodDoctors",
+    "pages/doctorDetail/doctorDetail",
+    "pages/myPolicy/myPolicy",
+    "pages/policyDetail/policyDetail",
+    "pages/insuranceDetail/insuranceDetail",
+    "pages/policyForm/policyForm"
   ],
   "window": {
     "backgroundTextStyle": "light",

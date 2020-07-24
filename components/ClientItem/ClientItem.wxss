@@ -24,6 +24,7 @@
   color: #333;
   font-size: 28rpx;
   font-weight: 500;
+  flex-shrink: 0;
 }
 .client_item_box .client_detail_block .client_detail_box .detail_top .detail_sex {
   width: 37rpx;
@@ -37,11 +38,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+.client_item_box .client_detail_block .client_detail_box .detail_top .detail_sex.male {
+  background: #0ABBFF;
 }
 .client_item_box .client_detail_block .client_detail_box .detail_top .detail_id {
   color: #999;
   font-size: 28rpx;
   font-weight: 500;
+  white-space: nowrap;
 }
 .client_item_box .client_detail_block .client_detail_box .detail_phone {
   font-size: 28rpx;

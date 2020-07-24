@@ -1,0 +1,12 @@
+<!--pages/goodDoctors/goodDoctors.wxml-->
+<view class="good_doctor_wrapper">
+    <!-- 顶部搜索框 -->
+    <view class="doctor_search_box">
+        <view class="icon_search"></view>
+        <input class="doctor_search_input" type="text" placeholder="搜索医生/医院" bindinput="searchInputChange"/>
+    </view>
+    <!-- 客户列表 -->
+    <view class="good_doctor_list">
+        <DoctorItem wx:for="{{doctorArray}}" wx:key="id" doctorData="{{item}}"></DoctorItem>
+    </view>
+</view>

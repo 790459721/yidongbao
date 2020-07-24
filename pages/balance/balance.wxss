@@ -70,3 +70,6 @@
   margin: auto;
   bottom: 77rpx;
 }
+.balance_wrapper .withdraw_btn.disable {
+  background: #ccc;
+}

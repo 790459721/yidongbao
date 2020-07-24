@@ -1,0 +1,108 @@
+<!-- pages/policyForm/policyForm.wxml -->
+<view class="policy_form_wrapper">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <!-- 被保人 -->
+        <mp-cells title="被保人" ext-class="cells_title">
+            <mp-cell title="姓名" ext-class="cell_title">
+                <input type="text" placeholder="请输入被保人姓名"></input>
+            </mp-cell>
+            <mp-cell title="证件类型" ext-class="cell_title" link>
+                <picker mode="selector" value="{{insuredCertificateIndex}}" bindchange="bindInsuredCertificateChange" range="{{insuredCertificateArray}}">
+                    <view>{{insuredCertificate}}</view>
+                </picker>
+            </mp-cell>
+            <mp-cell title="证件号" ext-class="cell_title" >
+                <input type="idcard" placeholder="请输入证件号码"></input>
+            </mp-cell>
+            <mp-cell title="手机号" ext-class="cell_title">
+                <input type="number" placeholder="请输入手机号码"></input>
+            </mp-cell>
+        </mp-cells>
+        <!-- 投保人信息 -->
+        <mp-cells title="投保人" ext-class="cells_title">
+            <mp-cell title="投保关系" ext-class="cell_title" link>
+                <picker mode="selector" value="{{relationshipIndex}}" bindchange="bindRelationshipChange" range="{{relationshipArray}}">
+                    <view>{{relationship}}</view>
+                </picker>
+            </mp-cell>
+            <mp-cell title="姓名" ext-class="cell_title">
+                <input type="text" placeholder="请输入投保人姓名"></input>
+            </mp-cell>
+            <mp-cell title="证件类型" ext-class="cell_title" link>
+                <picker mode="selector" value="{{policyHolderIndex}}" bindchange="bindPolicyHoldeChange" range="{{policyHolderArray}}">
+                    <view>{{policyHolder}}</view>
+                </picker>
+            </mp-cell>
+            <mp-cell title="证件号码" ext-class="cell_title">
+                <input type="text" placeholder="请输入投保人证件号码"></input>
+            </mp-cell>
+
+        </mp-cells>
+        <!-- 被保人信息 -->
+        <mp-cells title="就诊信息" ext-class="cells_title">
+            <mp-cell title="医院" ext-class="cell_title" link>
+                <picker mode="selector" value="{{holderType}}" bindchange="bindholderTypeChange" range="{{holderTypeArray}}">
+                    <view>{{holderType}}</view>
+                </picker>
+            </mp-cell>
+            <mp-cell title="科室" ext-class="cell_title" link>
+                <picker mode="selector" value="{{insuredObject}}" bindchange="bindholderTypeChange" range="{{insuredObject}}">
+                    <view>选择科室</view>
+                </picker>
+            </mp-cell>
+            <mp-cell title="主刀医生" ext-class="cell_title" link>
+                <picker mode="selector" value="{{insuredObject}}" bindchange="bindholderTypeChange" range="{{insuredObject}}">
+                    <view>主刀医生</view>
+                </picker>
+            </mp-cell>
+            <mp-cell title="手术评级表" ext-class="cell_title" link>
+                <input type="text" disabled="{{true}}" placeholder="上传手术评级表"></input>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="fixed_base"></view>
+    <view class="policy_form_footer_box {{isIPX ? 'ipx_bottom': ''}}" >
+        <checkbox-group bindchange="handleCheckBox" class="checkbox_box">
+            <checkbox checked="{{true}}" value="1" class="checkbox_item"/>
+            <text>
+                <text>我已确认</text>
+                <text class="remark_text">《投保须知及声明》</text>
+                <text class="remark_text">《条款详情》</text>
+            </text>
+        </checkbox-group>
+        <view class="footer_handle_box">
+            <view class="left">
+                <text class="left_desc">保费</text>
+                <text class="left_price">￥380</text>
+            </view>
+            <view class="sub_btn">立即投保</view>
+        </view>
+    </view>
+    <view wx:if="{{show}}" class="policy_dialog_back" catchtouchmove="{{true}}">
+        <view class="scroll_box">
+            <view class="dialog_scroll_left">
+                <scroll-view class="scroll_left" scroll-y="{{true}}">
+                    <view 
+                        class="left_item {{currentIndex === index ? 'active' : ''}}"
+                        wx:for="{{departmentLeftList}}"
+                        wx:key="*this"
+                        catch:tap="handleMenuClick"
+                        data-index="{{index}}"
+                    >
+                        <text class="item_text">{{item}}</text>
+                    </view>
+                </scroll-view>
+            </view>
+            <view class="dialog_scroll_right">
+                <scroll-view class="scroll_right" scroll-y="{{true}}">
+                    <view class="right_item"
+                        wx:for="{{departmentRightContent}}"
+                        wx:key="*this"
+                        catch:tap="handleChooseDepartment"
+                        data-department="{{item}}"
+                    >{{item.department}}</view>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,135 @@
+/* pages/policyDetail/policyDetail.wxss */
+.policy_detail_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 230rpx;
+}
+.policy_detail_wrapper .detail_banner {
+  padding: 55rpx 37rpx 25rpx;
+  width: 100vw;
+  height: 238rpx;
+  background: #28CC77;
+  color: #fff;
+  font-size: 38rpx;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.policy_detail_wrapper .detail_banner .policy_num {
+  font-size: 26rpx;
+  line-height: 33rpx;
+  margin: 15rpx 0 15rpx;
+}
+.policy_detail_wrapper .detail_banner .policy_type {
+  font-size: 26rpx;
+  line-height: 33rpx;
+}
+.policy_detail_wrapper .detail_banner .policy_state {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 70rpx;
+  bottom: 20rpx;
+  font-size: 34rpx;
+}
+.policy_detail_wrapper .detail_banner .policy_state .state_icon {
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+.policy_detail_wrapper .detial_section {
+  background: #ffffff;
+  box-shadow: 0rpx 2rpx 12rpx 0rpx rgba(203, 203, 203, 0.5);
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  width: 670rpx;
+}
+.policy_detail_wrapper .detial_section .section_title_box {
+  display: flex;
+  height: 82rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333333;
+  border-bottom: 1rpx dashed #999999;
+}
+.policy_detail_wrapper .detial_section .section_title_box .title_left {
+  display: flex;
+  align-items: center;
+}
+.policy_detail_wrapper .detial_section .section_title_box .title_left .title_icon {
+  width: 4rpx;
+  height: 24rpx;
+  background: #28cc77;
+  margin-right: 14rpx;
+}
+.policy_detail_wrapper .detial_section .section_title_box .title_right {
+  color: #999;
+}
+.policy_detail_wrapper .detial_section .section_cell_box {
+  padding: 26rpx 30rpx 4rpx 30rpx;
+}
+.policy_detail_wrapper .detial_section .section_cell_box .cell_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  line-height: 37rpx;
+  margin-bottom: 22rpx;
+}
+.policy_detail_wrapper .detial_section .section_cell_box .cell_item .cell_item_title {
+  color: #666;
+  flex-shrink: 0;
+}
+.policy_detail_wrapper .detial_section .section_cell_box .cell_item .cell_item_footer {
+  color: #333;
+}
+.policy_detail_wrapper .policy_detail_footer_handle {
+  background: #ffffff;
+  box-shadow: 0rpx 2rpx 12rpx 0rpx rgba(203, 203, 203, 0.5);
+  width: 100vw;
+  position: fixed;
+  padding: 20rpx 40rpx 40rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.policy_detail_wrapper .policy_detail_footer_handle .handle_top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+}
+.policy_detail_wrapper .policy_detail_footer_handle .handle_top .check_text {
+  margin-right: 20rpx;
+}
+.policy_detail_wrapper .policy_detail_footer_handle .handle_top .pdf_text,
+.policy_detail_wrapper .policy_detail_footer_handle .handle_top .handle_download {
+  color: #28CC77;
+}
+.policy_detail_wrapper .policy_detail_footer_handle .handle_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.policy_detail_wrapper .policy_detail_footer_handle .handle_bottom .concat {
+  height: 70rpx;
+  width: 210rpx;
+  background: yellowgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 8rpx;
+}
+.policy_detail_wrapper .policy_detail_footer_handle .handle_bottom .application {
+  height: 70rpx;
+  width: 360rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  color: #ccc;
+}

@@ -1,9 +1,9 @@
 <!--pages/advisoryDetail/advisoryDetail.wxml-->
 <view class="advisory_detail_wrapper">
     <view class="detail_patient_info">
-        <image class="patient_avatar" src=""></image>
+        <image class="patient_avatar" src="{{customer.headUrl}}"></image>
         <view class="info_box">
-            <view class="patient_name">朱士琴 </view>
+            <view class="patient_name">{{customer.name}}</view>
             <view class="create_time">07-09</view>
         </view>
     </view>

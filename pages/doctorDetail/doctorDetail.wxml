@@ -1,0 +1,62 @@
+<!-- pages/doctorDetail/doctorDetail.wxml -->
+<view class="doctor_detail_wrapper">
+    <!-- 医生 -->
+    <view class="my_doctor_box">
+        <view class="my_doctor_left">
+            <image class="doctor_avatar"></image>
+            <view class="message_btn">咨询</view>
+        </view>
+        <view class="my_doctor_right">
+            <view class="right_top">
+                <view class="right_top_left">
+                    <view class="doctor_name">李医生</view>
+                    <view class="doctor_job_title">主任医师</view>
+                </view>
+                <view class="like_state">
+                    <view class="like_icon iconfont icon_addlike"></view>
+                    <view class="like_text">关注</view>
+                </view>
+            </view>
+            <view class="right_center">
+                <view class="right_center_hospital">复旦大学附属华山医院</view>
+                <view class="right_center_department">皮肤科</view>
+            </view>
+            <view class="right_bottom">
+                <view class="bottom_tag">
+                    <view class="tag_point">●</view>
+                    <view class="tag_text">优质服务</view>
+                </view>
+                <view class="bottom_star_icon iconfont icon_star "></view>
+                <view class="bottom_star_num">4.5</view>
+                <view class="message_num">3000条问题</view>
+            </view>
+        </view>
+    </view>
+    <!-- 相关互动 -->
+    <view class="interactive_box">
+        <view class="interactive_title_box">
+            <view class="interactive_split"></view>
+            <view class="interactive_title">相关互动</view>
+            <view class="interactive_split"></view>
+        </view>
+        <view class="detail_patient_info">
+            <image class="patient_avatar" src=""></image>
+            <view class="info_box">
+                <view class="patient_name">朱士琴</view>
+                <view class="create_time">07-09</view>
+            </view>
+        </view>
+        <view class="advisory_detail_content">
+            <text>
+                医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题
+            </text>
+        </view>
+        <view class="advisory_detail_images">
+            <image wx:for="{{5}}" class="detail_images" src=""></image>
+        </view>
+        <view class="advisory_detail_return">
+            <text>李医生：</text>
+            <text>平时注意饮食健康，作息规律…</text>
+        </view>
+    </view>
+</view>

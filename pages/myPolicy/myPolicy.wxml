@@ -1,0 +1,4 @@
+<!--pages/myPolicy/myPolicy.wxml-->
+<view class="my_policy_wrapper">
+    <PolicyItem></PolicyItem>
+</view>

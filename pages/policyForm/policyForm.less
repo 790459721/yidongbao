@@ -1,0 +1,165 @@
+/* pages/policyForm/policyForm.wxss */
+.policy_form_wrapper {
+    color: #333;
+    background: #f7f7f7;
+    .cells_title {
+        .weui-cells__title {
+            color: #333;
+            font-size: 34rpx;
+            font-weight: bold;
+        }
+        .cell_title {
+            min-height: 80rpx;
+            font-size: 28rpx;
+            .weui-cell__hd {
+                width: 260rpx;
+                white-space: nowrap;
+            }
+            .placeholder_text {
+                color: #888;
+            }
+            .select_sex_box {
+                display: flex;
+                .option_sex {
+                    border: 1rpx solid #777;
+                    color: #777;
+                    margin-right: 20rpx;
+                    border-radius: 40rpx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 26rpx;
+                    padding: 8rpx 28rpx;
+                }
+            }
+            .icon_container {
+                display: flex;
+                align-items: center;
+                .click_desc {
+                    margin-left: 10rpx;
+                    color: #0D919E;
+                }
+            }
+        }
+    }
+    .policy_form_footer_box {
+        width: 100vw;
+        background: #fff;
+        z-index: 99;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        &.ipx_bottom {
+            padding-bottom: 34rpx;
+        }
+        .checkbox_box {
+            border-top: 1rpx solid #eee;
+            padding: 10rpx 20rpx;
+            text {
+                font-size: 24rpx;
+            }
+            .remark_text {
+                color: #0D919E;
+            }
+            .checkbox_item {
+                transform: scale(0.6,0.6);
+            }
+        }
+        .footer_handle_box {
+            padding: 15rpx 30rpx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1rpx solid #eee;
+            .left {
+                display: flex;
+                align-items: center;
+                .left_desc {
+                    color: #666;
+                    font-size: 28rpx;
+                    margin-right: 30rpx;
+                }
+                .left_price {
+                    color: #FF8A01;
+                    font-weight: 700;
+                    font-size: 44rpx;
+                }
+            }
+            .sub_btn {
+                width: 320rpx;
+                height: 88rpx;
+                border-radius: 100rpx;
+                background: #FF8A01;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 34rpx;
+                font-weight: 700;
+            }
+        }
+    }
+    .fixed_base {
+        width: 100vw;
+        height: 240rpx;
+    }
+    .policy_dialog_back {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        align-items: flex-end;
+        .scroll_box {
+            width: 100vw;
+            height: 70vh;
+            background: #fff;
+            display: flex;
+            .dialog_scroll_left {
+                height: 100%;
+                width: 280rpx;
+                background:rgba(247,247,247,1);
+                .scroll_left {
+                    height: 100%;
+                    width: 280rpx;
+                    .left_item {
+                        height: 110rpx;
+                        width: 280rpx;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .item_text {
+                            display: block;
+                            width: 240rpx;
+                            text-align: center;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        &.active {
+                            background: #fff;
+                            border-bottom: 3rpx solid #33c29d;
+                        }
+                    }
+                }
+            }
+            .dialog_scroll_right {
+                height: 100%;
+                width: 610rpx;
+                .scroll_right {
+                    height: 100%;
+                    width: 610rpx;
+                    .right_item {
+                        height: 110rpx;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 81rpx;
+                    }
+                }
+            }
+        }
+    }
+}

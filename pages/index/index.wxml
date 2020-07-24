@@ -14,34 +14,36 @@
 <view class="home_wrapper">
     <!-- banner部分 -->
     <view class="home_banner_back">
-        <view class="home_banner"></view>
+        <image class="home_banner" src="{{bannerArray[0].imgUrl}}"></image>
     </view>
     <view class="home_main">
         <!-- 服务项目 -->
         <!-- 医生端 -->
-        <block wx:if="{{platform === 1}}">
-          <view class="module_title">服务项目</view>
+        <block wx:if="{{roleType === 'DOCTORS' || roleType === 'ASSISTANT'}}">
+          <view class="module_title">{{serviceModule.title}}</view>
           <view class="services_project_box">
-              <view class="project_item" catch:tap="goToClientManage">
-                  <view class="item_icon icon_client"></view>
-                  <view class="item_name">客户管理</view>
+              <!-- <view class="project_item" catch:tap="goToClientManage" wx:for="{{serviceModule.moduleArray}}" wx:key="index">
+                  <image class="item_icon" src="{{item.imgUrl}}"></image>
+                  <view class="item_name">{{item.title}}</view>
+              </view> -->
+              <view class="project_item" catch:tap="goToClientManage" >
+                  <image class="item_icon icon_client" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_client.png"></image>
+                  <view class="item_name">患者管理</view>
               </view>
-              <view class="project_split"></view>
-              <view class="project_item" catch:tap="goToMyCard">
-                  <view class="item_icon icon_my_card"></view>
+              <view class="project_item" catch:tap="goToMyCard" >
+                  <image class="item_icon icon_my_card" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_my_card.png"></image>
                   <view class="item_name">我的名片</view>
               </view>
-              <view class="project_split"></view>
-              <view class="project_item">
-                  <view class="item_icon icon_public_active"></view>
+              <view class="project_item" >
+                  <image class="item_icon icon_public_active" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_public_active.png"></image>
                   <view class="item_name">发布动态</view>
               </view>
           </view>
         </block>
-        <block wx:elif="{{platform === 2 || platform === 3}}">
+        <block wx:elif="{{roleType === 'PATIENT' || roleType === 'VISITORS'}}">
           <view class="module_title my_doctor">我的医生</view>
           <view class="my_doctor_box">
-            <block wx:if="{{platform === 2}}">
+            <block wx:if="{{roleType === 'PATIENT'}}">
               <view class="my_doctor_left">
                 <image class="doctor_avatar"></image>
                 <view class="message_btn">咨询</view>
@@ -67,7 +69,6 @@
                     <view class="tag_text">优质服务</view>
                   </view>
                   <view class="bottom_star_icon iconfont icon_star "></view>
-                  <view class="bottom_star_num">4.5</view>
                   <view class="message_num">3000条问题</view>
                 </view>
               </view>
@@ -81,14 +82,14 @@
           </view>
         </block>
         <!-- 手术意外险 -->
-        <view class="module_title insurance_title">手术意外险</view>
+        <view class="module_title insurance_title">{{productModule.title}}</view>
         <view class="product_list_box">
+            <ProductItem wx:for="{{productModule.productArray}}" wx:key="index" surgeryData="{{item}}"></ProductItem>
+            <!-- <ProductItem></ProductItem>
             <ProductItem></ProductItem>
             <ProductItem></ProductItem>
             <ProductItem></ProductItem>
-            <ProductItem></ProductItem>
-            <ProductItem></ProductItem>
-            <ProductItem></ProductItem>
+            <ProductItem></ProductItem> -->
         </view>
     </view>
 </view>

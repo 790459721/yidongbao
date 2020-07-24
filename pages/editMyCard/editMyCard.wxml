@@ -17,7 +17,7 @@
                 <view slot="footer">
                     <image class="doctor_avatar" 
                         mode="widthFix"
-                        src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_avatar.png">
+                        src="{{ formData.avatar || 'https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_avatar.png'}}">
                     </image>
                 </view>
             </mp-cell>

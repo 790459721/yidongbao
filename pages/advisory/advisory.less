@@ -38,7 +38,10 @@
             }
         }
         .item_right {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             .item_time {
                 color: #999999;
                 font-size: 24rpx;
@@ -55,6 +58,9 @@
                 align-items: center;
                 color: #fff;
                 font-size: 22rpx;
+                &.num_no {
+                    background: transparent;
+                }
             }
         }
     }

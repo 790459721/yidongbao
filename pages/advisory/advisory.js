@@ -5,16 +5,38 @@
  */ 
 // pages/advisory/advisory.js
 import {jumpPage} from '../../utils/jumpPage'
+import { getQueryDoctorCommentArray, getQueryCommentArray } from '../../utils/api'
+import { monthFormatTime } from '../../utils/util'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    customerList:[]
   },
-
-  jumpToAdvisoryDetail() {
-      jumpPage('/pages/advisoryDetail/advisoryDetail')
+  onLoad() {
+    this.getQueryCommentArray()
+  },
+  async getQueryCommentArray() {
+    const res = await getQueryCommentArray()
+    console.log(res)
+    const {commentArray} = res
+    this.setData({
+        customerList: this.handleDataTime(commentArray)
+    })
+  },
+  handleDataTime(data) {
+    data.forEach(element => {
+        element.gmtCreate = monthFormatTime(new Date(element.gmtCreate))
+    });
+    return data
+  },
+  jumpToAdvisoryDetail(e) {
+      console.log(e)
+      const { customerid } = e.currentTarget.dataset
+      jumpPage('/pages/advisoryDetail/advisoryDetail',{
+        customerId:customerid 
+      })
   }
 })

@@ -1,0 +1,46 @@
+/* components/PolicyItem/PolicyItem.wxss */
+.policy_item_box {
+    width:710rpx;
+    height:283rpx;
+    background:rgba(255,255,255,1);
+    border-radius:8rpx;
+    .policy_info {
+        padding: 22rpx 45rpx 23rpx 20rpx;
+        border-bottom: 1rpx solid #F1F1F1;
+        .item_top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15rpx;
+            .policy_name {
+                color: #333;
+                font-size: 32rpx;
+                font-weight:500;
+                line-height: 45rpx;
+            }
+            .policy_price {
+                font-size:30rpx;
+                font-weight:500;
+                color:rgba(248,134,66,1);
+                line-height:42rpx;
+            }
+        }
+        .item_policy_num, .valid_period {
+            font-size:28rpx;
+            color:rgba(102,102,102,1);
+            line-height:40rpx;
+            margin-bottom: 16rpx;
+        }
+    }
+    .policy_state {
+        padding-left: 23rpx;
+        margin-top: 17rpx;
+        font-size:28rpx;
+        font-weight:500;
+        color:rgba(102,102,102,1);
+        line-height:40rpx;
+        text {
+            color: #5ADEB7;
+        }
+    }
+}

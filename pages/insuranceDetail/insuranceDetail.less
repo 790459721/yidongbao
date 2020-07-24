@@ -1,0 +1,383 @@
+/* pages/insuranceDetail/insuranceDetail.wxss */
+// http://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/pic-01.png
+.insurance_detail_wrapper {
+    background: #F7F7F7;
+    width: 100vw;
+    min-height: 100vh;
+    .insurance_detail_banner {
+        width: 100vw;
+        height: 299rpx;
+        background: url(http://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/pic-01.png) no-repeat center;
+        background-size: contain;
+
+    }
+    .insurance_detail_about {
+        width: 100vw;
+        height: 163rpx;
+        background:rgba(255,255,255,1);
+        border-top-left-radius:20rpx;
+        border-top-right-radius:20rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -15rpx;
+        margin-bottom: 16rpx;
+        .about_item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .top_text {
+                font-size: 36rpx;
+                color: #2397A0;
+                line-height:54rpx;
+            }
+            .bottom_text {
+                font-size: 30rpx;
+                color: #333;
+                line-height:47rpx;
+                font-weight:bold;
+            }
+        }
+    }
+    .case_choose_box {
+        margin-bottom: 15rpx;
+        .case_choose_handle {
+            background: #fff;
+            padding: 32rpx 30rpx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1rpx solid #f7f7f7;
+            .handle_text {
+                font-size:34rpx;
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+            }
+            .choose_handle_box {
+                display: flex;
+                .cases_item {
+                    width: 110rpx;
+                    height: 50rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #CCCCCC;
+                    border: 2rpx solid #CCCCCC;
+                    border-radius: 25rpx;
+                    margin-left: 30rpx;
+                    font-size:24rpx;
+                }
+            }
+        }
+        .price_info {
+            padding: 28rpx 30rpx;
+            background: #fff;
+            border-bottom: 2rpx solid #f7f7f7;
+            .info_item {
+                display: flex;
+                justify-content: space-between;
+                font-size: 28rpx;
+                color: #333;
+                line-height:60rpx;
+            }
+        }
+        .cost_range {
+            padding: 32rpx 30rpx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border-bottom: 2rpx solid #F7F7F7;
+            .content_title {
+                font-size:28rpx;
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                line-height:35rpx; 
+            }
+            .content_tab {
+                display: flex;
+                align-items: center;
+                .tab_item {
+                    height: 50rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #CCCCCC;
+                    border: 2rpx solid #CCCCCC;
+                    border-radius: 25rpx;
+                    padding: 0 14rpx;
+                    margin-left: 30rpx;
+                    font-size:24rpx;
+                }
+            }
+        }
+        .age_range {
+            padding: 32rpx 30rpx;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border-bottom: 2rpx solid #F7F7F7;
+            .content_title {
+                font-size:28rpx;
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                line-height:35rpx; 
+            }
+            .content_tab {
+                display: flex;
+                align-items: center; 
+                .tab_item {
+                    height: 50rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #CCCCCC;
+                    border: 2rpx solid #CCCCCC;
+                    border-radius: 25rpx;
+                    padding: 0 14rpx;
+                    margin-left: 30rpx;
+                    font-size:18rpx;
+                }
+            }
+        }
+        .ensure_detail {
+            padding: 32rpx 30rpx;
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            border-bottom: 1rpx solid #F7F7F7;
+            .content_title {
+                font-size:28rpx;
+                font-weight:bold;
+                color:rgba(51,51,51,1);
+                line-height:35rpx; 
+            }
+            .content_btn {
+                font-size: 28rpx;
+                line-height: 35rpx;
+                color: #208DA2;
+            }
+        }
+    }
+    .tab_cards {
+        width: 100vw;
+        height: 110rpx;
+        background: #fff;
+        .tab_cards_out {
+            display: flex;
+            width: 100vw;
+            height: 110rpx;
+            border-bottom: 1rpx solid #f7f7f7;
+            background: #fff;
+            align-items: center;
+            justify-content: space-around;
+            color: #666666;
+            font-size: 32rpx;
+            &.tab_cards_fiexd {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        }
+        .tab_card_item {
+            height: 110rpx;
+            display: flex;
+            align-items: center;
+            &.active {
+                color: #208DA2;
+                font-weight: 500;
+                border-bottom: 4rpx solid #2397A0;
+            }
+        }
+    }
+    .cards_content {
+        .product_feature {
+            width: 100vw;
+            height: 2279rpx;
+        }
+        .why_area {
+            padding: 52rpx 28rpx 30rpx 20rpx;
+            background-color: #fff;
+            border-bottom: 2rpx solid #eee;
+            box-sizing: border-box;
+            .why_title {
+                text-align: center;
+                color: #151515;
+                font-size: 48rpx;
+                line-height: 72rpx;
+                font-weight: 700;
+                text {
+                    color: #FF8A01;
+                    &.appear_title {
+                        color: #0d919e;
+                        // margin-right: 20rpx;
+                    }
+                }
+            }
+            .why_desc {
+                text-align: center;
+                font-size: 28rpx;
+                color: #666;
+                line-height: 42rpx;
+            }
+            .why_reasons_box {
+                margin-top: 60rpx;
+                .resaons_item {
+                    display: flex;
+                    margin-bottom: 30rpx;
+                    align-items: center;
+                    .item_icon {
+                        flex-shrink: 0;
+                        width: 144rpx;
+                        height: 144rpx;
+                        margin-right: 20rpx;
+                    }
+                    .item_info {
+                       .item_reason_title {
+                           color: #333;
+                           font-weight: bold;
+                           font-size: 30rpx;
+                           line-height: 64rpx;
+                       } 
+                       .item_reason_desc {
+                           font-size: 26rpx;
+                           line-height: 40rpx;
+                           color: #666;
+                       }
+                    }
+                }
+            }
+            .includes_tab {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 48rpx;
+                .item_box {
+                    .item_icon {
+                       width: 160rpx; 
+                       height: 174rpx;
+                    }
+                    .item_name {
+                        color: #333;
+                        font-size: 30rpx;
+                        line-height: 46rpx;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .includes_desc {
+                color: #666;
+                text-align: center;
+                margin-top: 32rpx;
+                font-size: 28rpx;
+            }
+            .advantage_box {
+                margin-top: 48rpx;
+                display: flex;
+                .advantage_img {
+                    width: 362rpx;
+                    height: 284rpx;
+                    flex-shrink: 0;
+                }
+                .line_item {
+                    color: #333;
+                    font-size: 26rpx;
+                    line-height: 32rpx;
+                    &.first {
+                        margin-top: 54rpx;
+                    }
+                    &.second {
+                        margin-top: 60rpx; 
+                    }
+                    &.third {
+                        margin-top: 30rpx;
+                    }
+                }
+            }
+            .example_case_box {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 8rpx 0;
+                padding-left: 10rpx;
+                border-radius: 200rpx;
+                box-shadow:0rpx 2rpx 9rpx 0rpx rgba(204,204,204,0.5);
+                .case_user_avatar {
+                    width: 116rpx;
+                    height: 116rpx;
+                    margin-right: 50rpx;
+                    flex-shrink: 0;
+                }
+                .case_right {
+                    .right_user_info, .right_money {
+                        display: inline-flex;
+                    }
+                    .money_color {
+                        color: #FF8A01;
+                    }
+                }
+            }
+            .example_case_introduct {
+                .section_part {
+                    margin-top: 50rpx;
+                    font-size: 28rpx;
+                    color: #333;
+                    line-height: 41rpx;
+                }
+            }
+            .common_question {
+                width: 100%;
+            }
+        }
+    }
+    .company_support {
+        height: 100rpx;
+        line-height: 100rpx;
+        color: #BBBBBB;
+        text-align: center;
+        font-size: 24rpx;
+    }
+    .bottom_empty {
+        width: 100vw;
+        height: 116rpx;
+        background: #fff;
+    }
+    .insurance_detail_footer {
+        height: 120rpx;
+        width: 100vw;
+        background: #fff;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30rpx;
+        border-top: 1rpx solid #eee;
+        .left {
+            .left_desc {
+                color: #666;
+                font-size: 28rpx;
+                margin-right: 30rpx;
+            }
+            .left_price {
+                color: #FF8A01;
+                font-weight: 700;
+                font-size: 44rpx;
+            }
+        }
+        .sub_btn {
+            width: 320rpx;
+            height: 88rpx;
+            border-radius: 100rpx;
+            background: #FF8A01;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 34rpx;
+            font-weight: 700;
+        }
+    }
+}

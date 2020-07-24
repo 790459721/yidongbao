@@ -1,0 +1,47 @@
+/* components/PolicyItem/PolicyItem.wxss */
+.policy_item_box {
+  width: 710rpx;
+  height: 283rpx;
+  background: #ffffff;
+  border-radius: 8rpx;
+}
+.policy_item_box .policy_info {
+  padding: 22rpx 45rpx 23rpx 20rpx;
+  border-bottom: 1rpx solid #F1F1F1;
+}
+.policy_item_box .policy_info .item_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+.policy_item_box .policy_info .item_top .policy_name {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 500;
+  line-height: 45rpx;
+}
+.policy_item_box .policy_info .item_top .policy_price {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #f88642;
+  line-height: 42rpx;
+}
+.policy_item_box .policy_info .item_policy_num,
+.policy_item_box .policy_info .valid_period {
+  font-size: 28rpx;
+  color: #666666;
+  line-height: 40rpx;
+  margin-bottom: 16rpx;
+}
+.policy_item_box .policy_state {
+  padding-left: 23rpx;
+  margin-top: 17rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #666666;
+  line-height: 40rpx;
+}
+.policy_item_box .policy_state text {
+  color: #5ADEB7;
+}

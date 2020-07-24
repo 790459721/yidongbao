@@ -2,5 +2,5 @@
   "usingComponents": {
       "ClientItem": "../../components/ClientItem/ClientItem"
   },
-  "navigationBarTitleText": "客户管理"
+  "navigationBarTitleText": "患者管理"
 }

@@ -396,7 +396,10 @@ const departmentList = [
         ]
     },
 ]
+
+const sexList = [ '男', '女']
 export {
     jobTitleList,
-    departmentList
+    departmentList,
+    sexList
 }

@@ -1,0 +1,95 @@
+<!--pages/policyDetail/policyDetail.wxml-->
+<view class="policy_detail_wrapper">
+    <view class="detail_banner">
+        <view class="policy_name">{{"肛肠手术安心保障保险—方案A"}}</view>
+        <view>
+            <view class="policy_num">1H1100323751934641</view>
+            <view class="policy_type">人寿保</view>
+        </view>
+        <view class="policy_state">
+            <view class="state_text">生效中</view>
+            <view class="state_icon iconfont icon_trues"></view>
+        </view>
+    </view>
+    <view class="detial_section">
+        <view class="section_title_box">
+            <view class="title_left">
+                <view class="title_icon"></view>
+                <view class="title_text">保单详情</view>
+            </view>
+        </view>
+        <view class="section_cell_box">
+            <view class="cell_item">
+                <text class="cell_item_title">保单号</text>
+                <text class="cell_item_footer">1H1100323751934641</text>
+            </view>
+            <view class="cell_item">
+                <text class="cell_item_title">保障计划</text>
+                <text class="cell_item_footer">{{"肛肠手术安心保障保险—方案A"}}</text>
+            </view>
+            <view class="cell_item">
+                <text class="cell_item_title">生效日期</text>
+                <text class="cell_item_footer">2019-07-25</text>
+            </view>
+            <view class="cell_item">
+                <text class="cell_item_title">终止日期</text>
+                <text class="cell_item_footer">2020-01-20</text>
+            </view>
+            <view class="cell_item">
+                <text class="cell_item_title">实时保费</text>
+                <text class="cell_item_footer">380元</text>
+            </view>
+        </view>
+    </view>
+    <view class="detial_section">
+        <view class="section_title_box">
+            <view class="title_left">
+                <view class="title_icon"></view>
+                <view class="title_text">投保人</view>
+            </view>
+            <view class="title_right">测试</view>
+        </view>
+        <view class="section_cell_box">
+            <view class="cell_item">
+                <text class="cell_item_title">身份证号码</text>
+                <text class="cell_item_footer">1H1100323751934641</text>
+            </view>
+            <view class="cell_item">
+                <text class="cell_item_title">联系电话</text>
+                <text class="cell_item_footer">1H1100323751934641</text>
+            </view>
+        </view>
+    </view>
+    <view class="detial_section">
+        <view class="section_title_box">
+            <view class="title_left">
+                <view class="title_icon"></view>
+                <view class="title_text">被保人</view>
+            </view>
+            <view class="title_right">测试</view>
+        </view>
+        <view class="section_cell_box">
+            <view class="cell_item">
+                <text class="cell_item_title">身份证号码</text>
+                <text class="cell_item_footer">1H1100323751934641</text>
+            </view>
+            <view class="cell_item">
+                <text class="cell_item_title">联系电话</text>
+                <text class="cell_item_footer">1H1100323751934641</text>
+            </view>
+        </view>
+    </view>
+    <view class="policy_detail_footer_handle">
+        <view class="handle_top">
+            <view class="check_epolicy">
+                <text class="check_text">查看</text>
+                <text class="pdf_text">电子保单</text>
+            </view>
+            <view class="handle_download">下载</view>
+        </view>
+        <view class="handle_bottom">
+            <view class="concat">联系客服</view>
+            <view class="application">申请理赔</view>
+        </view>
+    </view>
+</view>

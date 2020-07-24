@@ -1,0 +1,245 @@
+/* pages/doctorDetail/doctorDetail.wxss */
+.doctor_detail_wrapper {
+    padding: 0 30rpx 57rpx;
+    min-height: 100vh;
+    background: linear-gradient(177deg, rgba(255, 255, 255, 1) 0%, rgba(239, 252, 247, 1) 76%, rgba(251, 255, 254, 1) 100%);
+
+    .my_doctor_box {
+        background: #fff;
+        display: flex;
+        background: rgba(255, 255, 255, 1);
+        padding: 45rpx 17rpx;
+        border-bottom: 1rpx solid #ccc;
+
+        .my_doctor_left {
+            margin-right: 27rpx;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .doctor_avatar {
+                width: 120rpx;
+                height: 128rpx;
+                border-radius: 50%;
+                background: #ccc;
+                margin-bottom: 20rpx;
+            }
+
+            .message_btn {
+                width: 120rpx;
+                height: 45rpx;
+                background: rgba(90, 222, 183, 1);
+                border-radius: 22rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #FFFFFF;
+                font-size: 28rpx;
+            }
+        }
+
+        .my_doctor_right {
+            .right_top {
+                width: 520rpx;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .right_top_left {
+                    display: flex;
+                    align-items: center;
+
+                    .doctor_name {
+                        font-size: 46rpx;
+                        font-weight: 500;
+                        color: rgba(51, 51, 51, 1);
+                        line-height: 65rpx;
+                        color: #333;
+                        margin-right: 27rpx;
+                    }
+
+                    .doctor_job_title {
+                        font-size: 28rpx;
+                        color: rgba(153, 153, 153, 1);
+                        line-height: 40rpx;
+                    }
+                }
+
+                .like_state {
+                    width: 140rpx;
+                    height: 45rpx;
+                    border-radius: 23rpx;
+                    border: 2rpx solid #33C29D;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 20rpx;
+
+                    .like_icon {
+                        font-size: 26rpx;
+                        color: #33C29D;
+                        margin-right: 12rpx;
+                    }
+
+                    .like_text {
+                        font-size: 26rpx;
+                        color: #33C29D;
+                    }
+                }
+            }
+
+            .right_center {
+                margin: 1rpx 0 14rpx;
+                display: flex;
+                font-size: 28rpx;
+                font-weight: 500;
+                color: rgba(51, 51, 51, 1);
+                line-height: 40rpx;
+
+                .right_center_hospital {
+                    margin-right: 20rpx;
+                }
+            }
+
+            .right_bottom {
+                display: flex;
+                align-items: center;
+
+                .bottom_tag {
+                    width: 160rpx;
+                    height: 44rpx;
+                    border-radius: 4rpx;
+                    border: 1rpx solid rgba(204, 204, 204, 1);
+                    display: flex;
+                    align-items: center;
+                    margin-right: 46rpx;
+
+                    .tag_point {
+                        font-size: 20rpx;
+                        color: #33C29D;
+                        margin: 0 17rpx 0 11rpx;
+                    }
+
+                    .tag_text {
+                        font-size: 26rpx;
+                        color: rgba(153, 153, 153, 1);
+                    }
+                }
+
+                .bottom_star_icon {
+                    font-size: 30rpx;
+                    color: #5ADEB7;
+                    margin-right: 11rpx;
+                }
+
+                .bottom_star_num {
+                    margin-right: 12rpx;
+                    font-size: 26rpx;
+                    font-family: ZhenyanGB-Regular, ZhenyanGB;
+                    font-weight: 700;
+                    color: rgba(246, 182, 49, 1);
+                }
+
+                .message_num {
+                    font-size: 26rpx;
+                    color: rgba(153, 153, 153, 1);
+                }
+            }
+        }
+    }
+
+    .interactive_box {
+        margin: 43rpx auto 0;
+        width: 677rpx;
+        background: #fff;
+        border-radius: 10rpx;
+        box-shadow: 0rpx 2rpx 5rpx 1rpx rgba(239, 239, 239, 1);
+        padding: 34rpx 26rpx 111rpx;
+        .interactive_title_box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 41rpx;
+            .interactive_split {
+                width: 90rpx;
+                height: 1rpx;
+                background: #ccc;
+            }
+            .interactive_title {
+                font-size:34rpx;
+                font-weight:500;
+                color:rgba(51,51,51,1);
+                line-height:48rpx;
+                margin: 0 28rpx;
+            }
+        }
+        .detail_patient_info {
+            display: flex;
+            align-items: center;
+            margin: 28rpx 0 0;
+
+            .patient_avatar {
+                width: 100rpx;
+                height: 100rpx;
+                background: #eee;
+                border-radius: 50%;
+                margin-right: 15rpx;
+            }
+
+            .info_box {
+                .patient_name {
+                    font-size: 30rpx;
+                    color: rgba(51, 51, 51, 1);
+                    line-height: 42rpx;
+                    margin-bottom: 13rpx;
+                }
+
+                .create_time {
+                    font-size: 24rpx;
+                    color: rgba(153, 153, 153, 1);
+                    line-height: 33rpx;
+                }
+            }
+        }
+
+        .advisory_detail_content {
+            padding-bottom: 20rpx;
+            color: #333;
+            font-size: 28rpx;
+            line-height: 40rpx;
+        }
+
+        .advisory_detail_images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .detail_images {
+                width: 195rpx;
+                height: 195rpx;
+                background: #399;
+                margin-bottom: 20rpx;
+            }
+
+            &::after {
+                content: '';
+                width: 31%;
+            }
+        }
+
+        .advisory_detail_return {
+            background: #F5F6FA;
+            width: 623rpx;
+            height: 54rpx;
+            display: flex;
+            align-items: center;
+            padding-left: 12rpx;
+            color: #BBBBC3;
+            line-height: 40rpx;
+
+            .detail_return_input {
+                padding-left: 20rpx;
+                width: 600rpx;
+            }
+        }
+    }
+}

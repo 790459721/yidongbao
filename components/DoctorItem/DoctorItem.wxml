@@ -1,0 +1,36 @@
+<!-- components/DoctorItem/DoctorItem.wxml -->
+<view class="good_doctor_box" catch:tap="jumpDoctorDetail">
+    <view class="good_doctor_left">
+        <image class="doctor_avatar" src="{{doctorData.headUrl}}"></image>
+        <view class="message_btn">咨询</view>
+    </view>
+    <view class="good_doctor_right">
+        <view class="right_top">
+            <view class="right_top_left">
+                <view class="doctor_name">{{doctorData.name}}</view>
+                <view class="doctor_job_title">{{doctorData.title}}</view>
+            </view>
+            <view wx:if="{{!doctorData.follow}}" class="like_state">
+                <view class="like_icon iconfont icon_addlike"></view>
+                <view class="like_text">关注</view>
+            </view>
+            <view wx:else="{{!doctorData.follow}}" class="like_state has_like">
+                <view class="like_icon iconfont icon_hasliked"></view>
+                <view class="like_text">已关注</view>
+            </view>
+        </view>
+        <view class="right_center">
+            <view class="right_center_hospital">{{doctorData.hospitalName}}</view>
+            <view class="right_center_department">{{doctorData.hospitalDepartmentName}}</view>
+        </view>
+        <view class="right_bottom">
+            <!-- <view class="bottom_tag">
+                <view class="tag_point">●</view>
+                <view class="tag_text">优质服务</view>
+            </view> -->
+            <view class="bottom_star_icon iconfont icon_star "></view>
+            <view class="bottom_star_num">4.5</view>
+            <view class="message_num">{{doctorData.consultationNo}}</view>
+        </view>
+    </view>
+</view>

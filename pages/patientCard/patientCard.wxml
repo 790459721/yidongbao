@@ -1,0 +1,58 @@
+<!-- pages/myCard/myCard.wxml -->
+<mp-toptips delay="{{1000}}" msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view class="my_card_wrapper">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells>
+            <mp-cell prop="name" ext-class="my-cells">
+                <view class="require_cell_title" slot="title">
+                    <span>*</span>
+                    姓名
+                </view>
+                <input value="{{formData.name}}" bindinput="formInputChange" data-field="name" class="weui-input" placeholder="请输入姓名" />
+            </mp-cell>
+            <mp-cell link prop="avatar" ext-class="my-cells" catch:tap="handleUploadAvatar">
+                <view class="require_cell_title" slot="title">
+                    <span>*</span>
+                    头像
+                </view>
+                <view slot="footer">
+                    <image class="doctor_avatar" mode="widthFix" src="{{avatarSrc}}"></image>
+                </view>
+            </mp-cell>
+            <mp-cell link prop="sex" ext-class="my-cells">
+                <view class="require_cell_title" slot="title">
+                    <span>*</span>
+                    性别
+                </view>
+                <view class="weui-cell__bd picker_jobTitle">
+                    <picker bindchange="bindSexChange" range="{{sexList}}" data-field="sex">
+                        <view wx:if="{{sexValue}}" class="weui-select weui-select_in-select-after">
+                            {{sexValue}}
+                        </view>
+                        <view wx:else class="weui-select weui-select_in-select-after default_text">
+                            {{'请选择性别'}}
+                        </view>
+                    </picker>
+                </view>
+            </mp-cell>
+            <mp-cell prop="phoneNum" ext-class="my-cells">
+                <view class="require_cell_title" slot="title">
+                    <span>*</span>
+                    手机号
+                </view>
+                <input value="{{formData.phoneNum}}" bindinput="formInputChange" data-field="phoneNum" class="weui-input" placeholder="请输入手机号" />
+            </mp-cell>
+            <mp-cell prop="vcode" ext-class="my-cells">
+                <view class="require_cell_title" slot="title">
+                    <span>*</span>
+                    验证码
+                </view>
+                <input value="{{formData.vcode}}" bindinput="formInputChange" data-field="vcode" class="weui-input" placeholder="请输入验证码" />
+                <view slot="footer" class="get_code">验证码</view>
+            </mp-cell>
+        </mp-cells>
+    </mp-form>
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="submitForm">提交</button>
+    </view>
+</view>

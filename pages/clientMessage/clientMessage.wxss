@@ -45,3 +45,15 @@
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADIBAMAAABfdrOtAAAAMFBMVEUAAADOzs7Ozs7Ozs7Ozs7Ly8vNzc3Nzc3Nzc3Nzc3MzMzPz8/Nzc3V1dW/v7/Nzc0r8W1lAAAAD3RSTlMAv13TZDblvJmPVTowEgzn8Gh6AAABEElEQVR42u3UsUqCYRyF8UMRQVHQFdQUBIHNBW1Bmw1BY+AuuHgH7oI3oOANCN6BN6CTs+AVKAoKwl9fHHwdv+GAyPPsh992VLjBq+x1I95l7jZ29eRtmpBPeSsnZCFvzYSs5O0xITMdBQICAgICApIHAgICAgICkgcCAgICAgKSBwICAgICApIHAgICAgIi3b08FGiPFFm0RpKew1xFugp7P7oOezX9h72lymFvoVLYm2sY9ja6DHtvugl7Hakf5j4k3X97b6UxOasXBjkEAgICAgICkgcCAgICAgKSBwICAgICApIHAgICAgICkgcCAgJy6kg7IWt5KyVkLm/jhFTl7SIhTzL3F1GXvd8vFW0LUzuWZv5JOeIAAAAASUVORK5CYII=) no-repeat center;
   background-size: contain;
 }
+.client_message_wrapper .image_list_box {
+  padding-left: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30rpx;
+}
+.client_message_wrapper .image_list_box .show_image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}

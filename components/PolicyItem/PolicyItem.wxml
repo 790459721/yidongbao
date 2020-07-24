@@ -1,0 +1,18 @@
+<!--components/PolicyItem/PolicyItem.wxml-->
+<view class="policy_item_box" catch:tap="jumpPolicyDetail">
+    <view class="policy_info">
+        <view class="item_top">
+            <view class="policy_name">手术意外险</view>
+            <view class="policy_price">￥888</view>
+        </view>
+        <view class="item_policy_num">
+            服务单号：1H1100323751934641
+        </view>
+        <view class="valid_period">
+            起止时间：2020-07–08至 2021-07-07
+        </view>
+    </view>
+    <view class="policy_state">
+        状态：<text class="state_text">生效中</text>
+    </view>
+</view>

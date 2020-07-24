@@ -14,7 +14,6 @@
 .home_wrapper .home_banner_back .home_banner {
   width: 708rpx;
   height: 339rpx;
-  background: #369;
   border-radius: 10rpx;
   position: absolute;
   top: 89rpx;
@@ -198,7 +197,7 @@
 }
 .home_wrapper .my_doctor_box .my_doctor_right .right_bottom .bottom_star_icon {
   font-size: 30rpx;
-  color: #5ADEB7;
+  color: #F6B631;
   margin-right: 11rpx;
 }
 .home_wrapper .my_doctor_box .my_doctor_right .right_bottom .bottom_star_num {

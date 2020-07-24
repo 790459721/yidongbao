@@ -4,17 +4,17 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
 		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
-		"nodeModules": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -23,7 +23,8 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true,
+		"useIsolateContext": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -61,37 +62,9 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/clientManage/clientManage",
-					"pathName": "pages/clientManage/clientManage",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/clientMessage/clientMessage",
-					"pathName": "pages/clientMessage/clientMessage",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/messageDetail/messageDetail",
-					"pathName": "pages/messageDetail/messageDetail",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 3,
-					"name": "pages/editMyCard/editMyCard",
-					"pathName": "pages/editMyCard/editMyCard",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/uiTest/uiTest",
-					"pathName": "pages/uiTest/uiTest",
+					"id": 4,
+					"name": "患者名片",
+					"pathName": "pages/patientCard/patientCard",
 					"query": "",
 					"scene": null
 				},
@@ -104,36 +77,107 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/myCenter/myCenter",
-					"pathName": "pages/myCenter/myCenter",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/balance/balance",
-					"pathName": "pages/balance/balance",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "患者咨询列表",
 					"pathName": "pages/advisory/advisory",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "咨询详情",
 					"pathName": "pages/advisoryDetail/advisoryDetail",
-					"query": "",
+					"query": "customerId=1",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "我的盟友",
 					"pathName": "pages/myAlly/myAlly",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优选医生",
+					"pathName": "pages/goodDoctors/goodDoctors",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "医生详情",
+					"pathName": "pages/doctorDetail/doctorDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/myCenter/myCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "我的保单",
+					"pathName": "pages/myPolicy/myPolicy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "保单详情",
+					"pathName": "pages/policyDetail/policyDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "保险详情",
+					"pathName": "pages/insuranceDetail/insuranceDetail",
+					"query": "detailType=1&surgeryName=消化内镜诊疗意外险",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "填写表单信息",
+					"pathName": "pages/policyForm/policyForm",
+					"query": "detailType=1&surgeryName=消化内镜诊疗意外险",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "患者管理",
+					"pathName": "pages/clientManage/clientManage",
+					"query": "detailType=1&surgeryName=消化内镜诊疗意外险",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "留言详情",
+					"pathName": "pages/messageDetail/messageDetail",
+					"query": "customerId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布留言",
+					"pathName": "pages/clientMessage/clientMessage",
+					"query": "customerId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "编辑名片",
+					"pathName": "pages/editMyCard/editMyCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "账户余额",
+					"pathName": "pages/balance/balance",
+					"query": "",
 					"scene": null
 				}
 			]

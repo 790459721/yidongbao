@@ -2,10 +2,9 @@
 .mycenter_wrapper {
   width: 100vw;
   min-height: 100vh;
-  padding: 0 30rpx;
 }
 .mycenter_wrapper .mycenter_personal_info {
-  padding: 42rpx 0;
+  padding: 42rpx 30rpx;
   display: flex;
   align-items: center;
 }
@@ -43,39 +42,47 @@
   line-height: 42rpx;
 }
 .mycenter_wrapper .rest_money_box {
+  margin: 0 30rpx;
   height: 213rpx;
   width: 690rpx;
   background: linear-gradient(180deg, #2dd1a1 0%, #7dd694 100%);
   border-radius: 10rpx;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
 }
-.mycenter_wrapper .rest_money_box .rest_money_split {
-  width: 2rpx;
-  height: 149rpx;
-  background: #fff;
+.mycenter_wrapper .rest_money_box .rest_money {
+  width: 100%;
+  padding: 51rpx 36rpx 37rpx;
 }
-.mycenter_wrapper .rest_money_box .rest_money,
-.mycenter_wrapper .rest_money_box .my_ordered {
+.mycenter_wrapper .rest_money_box .rest_money .rest_money_top {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.mycenter_wrapper .rest_money_box .rest_money .rest_money_top .num {
+  font-size: 42rpx;
+  line-height: 59rpx;
+}
+.mycenter_wrapper .rest_money_box .rest_money .rest_money_top .handle_withdraw {
+  width: 109rpx;
+  height: 40rpx;
+  border-radius: 28rpx;
+  border: 1rpx solid #ffffff;
+  font-size: 28rpx;
+  color: #ffffff;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.mycenter_wrapper .rest_money_box .rest_money .num,
-.mycenter_wrapper .rest_money_box .my_ordered .num {
-  font-size: 42rpx;
-  line-height: 59rpx;
-  margin-bottom: 18rpx;
-}
-.mycenter_wrapper .rest_money_box .rest_money .text,
-.mycenter_wrapper .rest_money_box .my_ordered .text {
+.mycenter_wrapper .rest_money_box .rest_money .text {
   font-size: 28rpx;
   line-height: 40rpx;
 }
 .mycenter_wrapper .mycenter_section_title {
+  margin: 0 30rpx;
   font-size: 38rpx;
   font-weight: 500;
   color: #333333;
@@ -83,8 +90,9 @@
   margin-top: 40rpx;
 }
 .mycenter_wrapper .my_exclusive_box {
+  margin: 0 30rpx;
   display: flex;
-  padding: 32rpx 0 32rpx 36rpx;
+  padding: 32rpx 0 32rpx 20rpx;
   border-bottom: 10rpx solid #f9f9f9;
 }
 .mycenter_wrapper .my_exclusive_box .exclusive_item {
@@ -92,7 +100,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 105rpx;
+  margin-right: 100rpx;
 }
 .mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon {
   font-size: 58rpx;
@@ -103,12 +111,30 @@
 .mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon.icon_messages {
   color: #B39FF8;
 }
+.mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon.icon_best {
+  color: #F6B631;
+}
+.mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon.icon_zixun {
+  color: #F58F8F;
+}
+.mycenter_wrapper .my_exclusive_box .exclusive_item .exclusive_item_icon.icon_orderbook {
+  color: #4AD6AD;
+}
 .mycenter_wrapper .features_box {
+  margin: 0 30rpx;
   display: flex;
   justify-content: space-between;
   height: 99rpx;
   align-items: center;
   border-bottom: 1rpx solid #ccc;
+}
+.mycenter_wrapper .features_box.contact_button_tag {
+  background: #fff;
+  border-radius: 0;
+  padding: 0;
+  font-weight: normal;
+  display: flex;
+  width: 690rpx;
 }
 .mycenter_wrapper .features_box .features_tag {
   display: flex;
@@ -126,4 +152,54 @@
 }
 .mycenter_wrapper .features_box .features_tag_arrow_right {
   color: #ccc;
+}
+.mycenter_wrapper .top_banner {
+  width: 100%;
+  height: 189rpx;
+  background: linear-gradient(180deg, #2dd1a1 0%, #7dd694 100%);
+  margin-bottom: 131rpx;
+}
+.mycenter_wrapper .top_banner .top_info_box {
+  padding: 0 47rpx 0 32rpx;
+  width: 690rpx;
+  height: 213rpx;
+  box-shadow: 0rpx 2rpx 5rpx 2rpx rgba(207, 207, 207, 0.5);
+  border-radius: 10rpx;
+  position: absolute;
+  left: 30rpx;
+  top: 68rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mycenter_wrapper .top_banner .top_info_box .info_left {
+  display: flex;
+  align-items: center;
+}
+.mycenter_wrapper .top_banner .top_info_box .info_left .patient_avatar {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background: #ccc;
+  margin-right: 19rpx;
+}
+.mycenter_wrapper .top_banner .top_info_box .info_left .patient_info .patient_name {
+  font-size: 46rpx;
+  color: #333333;
+  line-height: 65rpx;
+  margin-bottom: 13rpx;
+}
+.mycenter_wrapper .top_banner .top_info_box .info_left .patient_info .patient_age_sex {
+  display: flex;
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 42rpx;
+}
+.mycenter_wrapper .top_banner .top_info_box .info_left .patient_info .patient_age_sex .patient_age {
+  margin-right: 19rpx;
+}
+.mycenter_wrapper .top_banner .top_info_box .icon_arrow_right {
+  color: #ccc;
+  font-size: 40rpx;
 }

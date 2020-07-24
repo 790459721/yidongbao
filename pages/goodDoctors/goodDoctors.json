@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "DoctorItem": "../../components/DoctorItem/DoctorItem"
+  },
+  "navigationBarTitleText": "优选医生"
+}

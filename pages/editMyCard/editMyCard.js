@@ -7,6 +7,10 @@ import {
     jobTitleList,
     departmentList
 } from '../../const/myCard'
+import {
+    generateCard
+} from '../../utils/api'
+import { baseUrl, env} from '../../utils/http'
 // pages/myCard/myCard.js
 Page({
 
@@ -59,9 +63,15 @@ Page({
                 },
             },
         ],
+        fromw: null,
+        sourceId: null
     },
     onLoad() {
+        this.getOptions()
         this.handleDepartmentData()
+    },
+    getOptions() {
+        console.log(this.options)
     },
     formInputChange(e) {
         const {
@@ -103,7 +113,9 @@ Page({
     },
     handleMenuClick(e) {
         console.log(e.currentTarget.dataset)
-        const {index} = e.currentTarget.dataset
+        const {
+            index
+        } = e.currentTarget.dataset
         const departmentRightContent = departmentList[index].childrenDepartment
         this.setData({
             currentIndex: index,
@@ -112,7 +124,9 @@ Page({
     },
     handleChooseDepartment(e) {
         console.log(e.currentTarget.dataset)
-        const {department} = e.currentTarget.dataset
+        const {
+            department
+        } = e.currentTarget.dataset
         this.setData({
             isShowDepartmentDailog: false,
             [`formData.${'department'}`]: department.department,
@@ -121,24 +135,37 @@ Page({
     },
     handleUploadAvatar() {
         wx.chooseImage({
-            success: (result)=>{
-                const tempFilePaths = res.tempFilePaths
+            success: (result) => {
+                const tempFilePaths = result.tempFilePaths
+                wx.showLoading({
+                    title: '头像上传中',
+                    mask: true,
+                });
+                const token = wx.getStorageSync('token');
                 wx.uploadFile({
-                    url: '',
+                    url: `${baseUrl[env]}/uploadFile`,
                     filePath: tempFilePaths[0],
                     name: 'file',
                     formData: {
-                        'user': 'test'
+                        token,
+                        appId: 'wx20b78713181410a8'
                     },
                     success: (result) => {
                         // TODO something
+                        console.log(JSON.parse(result.data))
+                        const avatar = JSON.parse(result.data).fullUrl
+                        this.setData({
+                            [`formData.${'avatar'}`]: avatar
+                        },() => {
+                            wx.hideLoading();
+                        })
                     },
-                    
+
                 });
-                  
+
             },
-            fail: ()=>{},
-            complete: ()=>{}
+            fail: () => {},
+            complete: () => {}
         });
     },
     submitForm() {
@@ -154,10 +181,30 @@ Page({
 
                 }
             } else {
-                wx.showToast({
-                    title: '校验通过'
-                })
+                this.generateCard()
             }
         })
+    },
+    // 生成名片
+    async generateCard() {
+        const {
+            avatar,
+            department,
+            hospitalName,
+            jobTitle,
+            name
+        } = this.data.formData
+        const res = await generateCard({
+            name,
+            headUrl: avatar,
+            hospitalName,
+            departmentName: department,
+            title: jobTitle
+        })
+        wx.setStorageSync('doctorInfo', res.user);
+        wx.redirectTo({
+            url: '/pages/myCard/myCard',
+        });
+          
     }
 })

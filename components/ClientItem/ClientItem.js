@@ -9,7 +9,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    itemData: Object
   },
 
   /**
@@ -23,8 +23,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    goToClientMessage() {
-        this.triggerEvent('goToClientMessage')
+    goToMessageDetail(e) {
+        console.log(e.currentTarget.dataset)
+        this.triggerEvent('goToMessageDetail',e.currentTarget.dataset)
     }
 
   }

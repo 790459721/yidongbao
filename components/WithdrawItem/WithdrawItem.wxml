@@ -2,9 +2,9 @@
     <view class="item_left_block">
         <view class="withdraw_item_icon iconfont icon_qiandai"></view>
         <view class="withdraw_item_desc">
-            <text class="desc_state">申请中</text>
-            <view class="withdraw_time">2020.07.06</view>
+            <text class="desc_state">{{renderData.withdrawStatus === 'DONE' ? '已提现' : '申请中'}}</text>
+            <view class="withdraw_time">{{renderData.gmtCreate}}</view>
         </view>
     </view>
-    <view class="withdraw_amount">-100</view>
+    <view class="withdraw_amount">-{{amount}}</view>
 </view>

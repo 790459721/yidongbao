@@ -1,76 +1,63 @@
+/*
+ * @Author: qinsensen
+ * @Date: 2020-07-16 18:29:43
+ * @Description: 
+ */
 // pages/myCard/myCard.js
-import {jumpPage} from '../../utils/jumpPage'
+import {
+    jumpPage
+} from '../../utils/jumpPage'
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-      hasInfo: false
-  },
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        hasInfo: false,
+        doctorInfo: {}
+    },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    wx.setNavigationBarTitle({
-        title: '复旦大学附属华山医院',
-    });
-    wx.setNavigationBarColor({
-        frontColor: '#ffffff',
-        backgroundColor: '#34D8A8',
-    });
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
-  jumpMyCard() {
-    jumpPage('/pages/editMyCard/editMyCard')
-  }
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+        this.setNavigationBarColor()
+        // this.getLocalData()
+        // const doctorInfo = wx.getStorageSync('doctorInfo');
+        // console.log(doctorInfo)
+    },
+    onShow() {
+        this.getLocalData()
+    },
+    // 设置导航栏颜色
+    setNavigationBarColor() {
+        wx.setNavigationBarColor({
+            frontColor: '#ffffff',
+            backgroundColor: '#34D8A8',
+        });
+    },
+    setNavigationBarTitle(title) {
+        wx.setNavigationBarTitle({
+            title,
+        });
+    },
+    //   获取本地存储数据
+    getLocalData() {
+        const doctorInfo = wx.getStorageSync('doctorInfo') || null;
+        console.log(doctorInfo)
+        if(doctorInfo) {
+            const { hospitalName, ...rest} = doctorInfo
+            this.setNavigationBarTitle(hospitalName)
+            this.setData({
+                hasInfo: true,
+                doctorInfo: {...rest}
+            },() => {
+                // wx.removeStorageSync('doctorInfo');
+            })
+        } 
+    },
+    // 跳转到编辑页面
+    jumpMyCard() {
+        jumpPage('/pages/editMyCard/editMyCard')
+    }
 })

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "PolicyItem": "../../components/PolicyItem/PolicyItem"
+  },
+  "navigationBarTitleText": "我的保单"
+}

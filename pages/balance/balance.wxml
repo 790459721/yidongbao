@@ -2,7 +2,7 @@
 <view class="balance_wrapper">
     <!-- 头部banner -->
     <view class="balance_banner">
-        <view class="balance_num">1000.00</view>
+        <view class="balance_num">{{balance}}</view>
         <view class="balance_text">账户余额(元)</view>
     </view>
     <view class="record_tab_container">
@@ -18,15 +18,27 @@
     </view>
     <view class="record_list">
         <block wx:if="{{listType === 'transaction'}}" >
-            <RecordItem listType="{{listType}}" icon="{{1}}"></RecordItem>
-            <RecordItem listType="{{listType}}" icon="{{2}}"></RecordItem>
+            <RecordItem 
+                wx:for="{{outlayArray}}" 
+                wx:key="id" 
+                listType="{{listType}}" 
+                icon="{{1}}"
+                renderData="{{item}}"
+            ></RecordItem>
         </block>
         <block wx:else>
-            <WithdrawItem listType="{{listType}}"></WithdrawItem>
-            <WithdrawItem listType="{{listType}}"></WithdrawItem>
+            <WithdrawItem 
+                wx:for="{{withdrawArray}}" 
+                wx:key="id" 
+                listType="{{listType}}"
+                renderData="{{item}}"
+            ></WithdrawItem>
         </block>
     </view>
-    <view class="withdraw_btn">
-        申请提现(可提现：1000元)
+    <view 
+        class="withdraw_btn {{balance < 10 ? 'disable' : ''}}"
+        catch:tap="handleWithdraw"
+        >
+        申请提现<text wx:if="{{balance > 10}}">(可提现：{{balance}}元)</text>
     </view>
 </view>

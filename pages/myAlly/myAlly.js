@@ -1,3 +1,8 @@
+/*
+ * @Author: qinsensen
+ * @Date: 2020-07-17 16:40:02
+ * @Description: 
+ */ 
 // pages/myAlly/myAlly.js
 Page({
 
@@ -5,62 +10,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    sourceId: null,
+    idShowDailog: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const loginData = wx.getStorageSync('loginData');
+    this.setData({
+        sourceId: loginData.id
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  showDailog() {
+    this.setData({
+        idShowDailog: true
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleCancle() {
+    this.setData({
+        idShowDailog: false
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (res) {
+    // if(res.from === '') {
 
-  }
+    // }
+    console.log(res)
+    const {sourceId} = this.data
+    console.log(sourceId)
+    return {
+        title: '医董保',
+        path: `/pages/editMyCard/editMyCard?fromw=ToFace&sourceId=${sourceId}`,
+        imageUrl: 'https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/share_banner_img.png'
+    }
+  },
 })

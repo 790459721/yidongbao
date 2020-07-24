@@ -2,16 +2,16 @@
 <view class="client_item_box">
     <view class="client_detail_block">
         <!-- 头像 -->
-        <image class="client_item_avatar" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/home_nav_back.png" />
+        <image class="client_item_avatar" src="{{itemData.headUrl || 'https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/default_avatar.png'}}" />
         <view class="client_detail_box">
             <view class="detail_top">
-                <view class="detail_name">李一一</view>
-                <view class="detail_sex">女</view>
-                <view class="detail_id">ID：172727</view>
+                <view class="detail_name">{{itemData.name}}</view>
+                <view class="detail_sex {{itemData.gender === 'MALE' ? 'male' : ''}}">{{itemData.gender === 'MALE' ? '男' : '女'}}</view>
+                <view class="detail_id">ID：{{itemData.customerNo}}</view>
             </view>
-            <view class="detail_phone">15000192551</view>
-            <view class="detail_create_time">创建时间：2020-07-09</view>
+            <view class="detail_phone">{{itemData.mobile}}</view>
+            <view class="detail_create_time">创建时间：{{itemData.gmtCreate}}</view>
         </view>
     </view>
-    <view class="detail_message_btn" catch:tap="goToClientMessage">留言</view>
+    <view class="detail_message_btn" catch:tap="goToMessageDetail" data-parentId="{{itemData.parentId}}" data-userId="{{itemData.id}}">留言</view>
 </view>

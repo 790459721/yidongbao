@@ -179,5 +179,43 @@
             border-radius:2rpx;
         }
     }
-    
+    .share_dailog_box {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        .dailog_box {
+           width: 532rpx; 
+           height: 548rpx;
+           border-radius:10rpx;
+           background: #fff;
+           position: absolute;
+           top: 0;
+           left: 0;
+           bottom: 0;
+           right: 0;
+           margin: auto;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           .dailog_content {
+               width: 470rpx;
+               height: 459rpx;
+               background: #ccc;
+           }
+           .dailog_close_btn {
+               position: absolute;
+               bottom: -100rpx;
+               width: 50rpx;
+               height: 50rpx;
+               background: url(https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_dailog_close.png) no-repeat center;
+               background-size: contain;
+               color: #878787;
+               z-index: 99;
+           }
+        }
+    }
 }

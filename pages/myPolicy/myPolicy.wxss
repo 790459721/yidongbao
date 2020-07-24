@@ -1,0 +1,7 @@
+/* pages/myPolicy/myPolicy.wxss */
+.my_policy_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background: #F1F1F1;
+  padding: 32rpx 20rpx;
+}

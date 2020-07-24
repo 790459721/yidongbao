@@ -10,7 +10,8 @@ Component({
    */
   properties: {
     listType:String,
-    icon: Number
+    icon: Number,
+    renderData: Object
   },
 
   /**
@@ -27,6 +28,6 @@ Component({
 
   },
   attached() {
-      console.log(this.properties.listType)
+      console.log(this.properties.renderData)
   }
 })
