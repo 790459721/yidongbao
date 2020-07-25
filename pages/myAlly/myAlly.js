@@ -2,8 +2,12 @@
  * @Author: qinsensen
  * @Date: 2020-07-17 16:40:02
  * @Description: 
- */ 
+ */
+import { getAllyInfo } from "../../utils/api";
+
+ 
 // pages/myAlly/myAlly.js
+
 Page({
 
   /**
@@ -18,9 +22,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const loginData = wx.getStorageSync('loginData');
+    const userInfo = wx.getStorageSync('userInfo');
+    this.getAllyInfo()
     this.setData({
-        sourceId: loginData.id
+        sourceId: userInfo.id
     })
   },
   showDailog() {
@@ -33,13 +38,14 @@ Page({
         idShowDailog: false
     })
   },
+  async getAllyInfo() {
+    const res = await getAllyInfo()
+    console.log(res);
+  },
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function (res) {
-    // if(res.from === '') {
-
-    // }
     console.log(res)
     const {sourceId} = this.data
     console.log(sourceId)

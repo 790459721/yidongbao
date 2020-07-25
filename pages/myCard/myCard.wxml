@@ -1,15 +1,15 @@
 <!--pages/myCard/myCard.wxml-->
 <view class="mycard_container">
     <view class="mycard_box">
-        <image class="mycard_avatar" src="{{doctorInfo.headUrl}}"></image>
+        <image class="mycard_avatar" src="{{userInfo.headUrl}}"></image>
         <block wx:if="{{hasInfo}}">
             <view class="edit_tag_box" catch:tap="jumpMyCard">
                 <text>编辑</text>
                 <view class="icon_edit"></view>
             </view>
-            <text class="user_name">{{doctorInfo.name}}</text>
-            <text class="user_department">{{doctorInfo.hospitalDepartmentName}}</text>
-            <text class="user_job_title">{{doctorInfo.title}}</text>
+            <text class="user_name">{{userInfo.name}}</text>
+            <text class="user_department">{{userInfo.hospitalDepartmentName}}</text>
+            <text class="user_job_title">{{userInfo.title}}</text>
         </block>
         <block wx:else>
             <view class="no_info_box" catch:tap="jumpMyCard">
@@ -20,7 +20,7 @@
                 </view>
             </view>
         </block>
-        <view class="two_code" style="background-image:url({{doctorInfo.qrCodeUrl}})"></view>
+        <view class="two_code" style="background-image:url({{userInfo.qrCodeUrl}})"></view>
         <text class="mycard_desc">扫一扫 咨询详情</text>
     </view>
 </view>

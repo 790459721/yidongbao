@@ -23,9 +23,9 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"useIsolateContext": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.3",
@@ -135,7 +135,7 @@
 					"id": 10,
 					"name": "保险详情",
 					"pathName": "pages/insuranceDetail/insuranceDetail",
-					"query": "detailType=1&surgeryName=消化内镜诊疗意外险",
+					"query": "productId=1347&surgeryName=眼科安康手术意外险",
 					"scene": null
 				},
 				{
@@ -178,6 +178,13 @@
 					"name": "账户余额",
 					"pathName": "pages/balance/balance",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "保障详情",
+					"pathName": "pages/securityDetail/securityDetail",
+					"query": "productId=1347",
 					"scene": null
 				}
 			]

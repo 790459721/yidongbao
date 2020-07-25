@@ -1,7 +1,7 @@
 <!-- pages/myCenter/myCenter.wxml -->
 <view class="mycenter_wrapper">
     <!-- 医生端 -->
-    <block wx:if="{{roleType !== 1}}">
+    <block wx:if="{{roleType === 1}}">
         <!-- 个人信息部分 -->
         <view class="mycenter_personal_info">
             <view class="info_avatar">
@@ -39,7 +39,7 @@
         </view>
     </block>
     <!-- 患者端 -->
-    <block wx:else class="patient_center_info">
+    <block wx:elif="{{roleType === 2 || roleType === 3}}" class="patient_center_info">
         <view class="top_banner">
             <view class="top_info_box" catch:tap="jumpPatientCard">
                 <view class="info_left">

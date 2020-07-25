@@ -1,0 +1,40 @@
+/* pages/securityDetail/securityDetail.wxss */
+.securityDetail_wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 30rpx;
+}
+.securityDetail_wrapper .detail_message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  height: 100rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.securityDetail_wrapper .detail_message .message_title {
+  font-size: 36rpx;
+  color: #000;
+  font-weight: bold;
+}
+.securityDetail_wrapper .detail_message .message_subtitle {
+  font-size: 28rpx;
+}
+.securityDetail_wrapper .detail_content_box .message_item_content {
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.securityDetail_wrapper .detail_content_box .message_item_content .item_content_title {
+  flex: 1;
+}
+.securityDetail_wrapper .detail_content_box .message_item_content .item_content_title.black_message {
+  color: #000;
+  font-weight: bold;
+}
+.securityDetail_wrapper .detail_content_box .message_item_content .item_content_subtitle {
+  margin-left: 100rpx;
+}

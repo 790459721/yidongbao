@@ -21,6 +21,7 @@ Component({
   },
   
   attached() {
+    // console.log(this.properties.surgeryData);
   },
   /**
    * 组件的方法列表
@@ -29,10 +30,11 @@ Component({
     jumpInsuranceDetail(e) {
         console.log(e)
         const {surgerydata} = e.currentTarget.dataset
-        const { detailType, surgeryName } = surgerydata
+        console.log(surgerydata);
+        const { id, name } = surgerydata
         jumpPage('/pages/insuranceDetail/insuranceDetail', {
-            detailType,
-            surgeryName
+            productId: id,
+            surgeryName: name
         })
     }
   },

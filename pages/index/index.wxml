@@ -1,16 +1,3 @@
-<!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
 <view class="home_wrapper">
     <!-- banner部分 -->
     <view class="home_banner_back">
@@ -19,13 +6,9 @@
     <view class="home_main">
         <!-- 服务项目 -->
         <!-- 医生端 -->
-        <block wx:if="{{roleType === 'DOCTORS' || roleType === 'ASSISTANT'}}">
+        <block wx:if="{{roleType === 1}}">
           <view class="module_title">{{serviceModule.title}}</view>
           <view class="services_project_box">
-              <!-- <view class="project_item" catch:tap="goToClientManage" wx:for="{{serviceModule.moduleArray}}" wx:key="index">
-                  <image class="item_icon" src="{{item.imgUrl}}"></image>
-                  <view class="item_name">{{item.title}}</view>
-              </view> -->
               <view class="project_item" catch:tap="goToClientManage" >
                   <image class="item_icon icon_client" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon_client.png"></image>
                   <view class="item_name">患者管理</view>
@@ -40,10 +23,10 @@
               </view>
           </view>
         </block>
-        <block wx:elif="{{roleType === 'PATIENT' || roleType === 'VISITORS'}}">
+        <block wx:elif="{{roleType === 2 || roleType === 3}}">
           <view class="module_title my_doctor">我的医生</view>
           <view class="my_doctor_box">
-            <block wx:if="{{roleType === 'PATIENT'}}">
+            <block wx:if="{{roleType === 2}}">
               <view class="my_doctor_left">
                 <image class="doctor_avatar"></image>
                 <view class="message_btn">咨询</view>

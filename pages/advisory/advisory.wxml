@@ -5,7 +5,8 @@
         class="advisory_item" 
         catch:tap="jumpToAdvisoryDetail"
         wx:key="id"
-        data-customerId="{{item.customerId}}"
+        data-id="{{item.id}}"
+        data-doctorId="{{item.doctorId}}"
     >
         <view class="item_left">
             <image src="{{item.headUrl || 'https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/default_avatar.png'}}" class="item_user_avatar"></image>

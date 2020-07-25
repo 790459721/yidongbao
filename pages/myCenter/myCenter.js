@@ -6,15 +6,14 @@
 // pages/myCenter/myCenter.js
 import {jumpPage} from '../../utils/jumpPage'
 import { getMyIndexData } from '../../utils/api';
-import { patientTypeArray } from '../../const/constMap';
-const app =  getApp();
+import { patientType, visitorType, doctorType } from '../../const/constMap';
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        roleType: 'PATIENT', //  0: 初始 1:医生 2:患者 3:普通用户
+        roleType: 0, //  0: 初始 1:医生 2:患者 3:普通用户
     },
 
     /**
@@ -37,8 +36,16 @@ Page({
         console.log('res', res)
         const { roleType, gender, headUrl, name, title, hospitalName } = res.user
         const { balance } = res.account
+        let letRoleType = 0
+        if(patientType.includes(roleType)) {
+            letRoleType = 2
+        }else if(doctorType.includes(roleType)) {
+            letRoleType = 1
+        }else {
+            letRoleType = 3
+        }
         this.setData({
-            roleType: patientTypeArray.includes(roleType) ? 2 : 1,
+            roleType: letRoleType,
             gender,
             headUrl,
             name,

@@ -1,6 +1,6 @@
 <!--components/ProductItem/ProductItem.wxml-->
 <view class="product_box">
-    <image class="product_item_icon" src="{{surgeryData.iconUrl}}" ></image>
+    <image class="product_item_icon" src="{{surgeryData.icon}}" ></image>
     <view class="product_item_detail">
         <view class="product_item_title">{{surgeryData.name}}</view>
         <view class="product_item_desc">{{surgeryData.title}}</view>

@@ -1,0 +1,15 @@
+<!--pages/securityDetail/securityDetail.wxml-->
+<view class="securityDetail_wrapper">
+    <view wx:for="{{productItemDetailArray}}" wx:for-item="mainItem" wx:for-index="mainIndex">
+        <view class="detail_message">
+            <view class="message_title {{mainItem.bold ? 'bold_title': ''}}">{{mainItem.title}}</view>
+            <view wx:if="{{mainItem.subtitle}}" class="message_subtitle">{{mainItem.subtitle}}</view>
+        </view>
+        <view class="detail_content_box" wx:for="{{mainItem.subItemArray}}" wx:for-item="contentItem" wx:for-index="contentIndex">
+            <view class="message_item_content">
+                <view class="item_content_title {{!contentItem.subtitle && mainIndex > 1 ? 'black_message' : ''}}">{{contentItem.title}} </view>
+                <view wx:if="{{contentItem.subtitle}}" class="item_content_subtitle">{{contentItem.subtitle}}</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -9,14 +9,6 @@ import { request } from './http'
  * @Date: 2020-07-21 16:50:01
  * @Description: 
  */ 
-// 获取openid
-const getOpendId = (data) => {
-    return request({
-        url:'/login',
-        method: 'POST',
-        data
-    })
-}
 // 获取首页数据
 const getIndexData = (data) => {
     return request({
@@ -32,13 +24,6 @@ const getMyCustomer = (data) => {
         data
     })
 }
-// 留言信息列表
-// const getQueryComment = (data) => {
-//     return request({
-//         url: '/queryComment',
-//         data
-//     })
-// }
 // 发表留言
 const addComment = (data) => {
     return request({
@@ -73,21 +58,7 @@ const getAccountRecord = data => {
     })
 }
 
-// 患者资讯列表
-const getQueryDoctorCommentArray = data => {
-    return request({
-        url: '/queryDoctorCommentArray',
-        data 
-    })
-}
 
-// 患者咨询详情
-const getQueryCommentDetail = data => {
-    return request({
-        url: '/queryCommentDetail',
-        data 
-    })
-}
 // 优选医生
 const getDoctorArray = data => {
     return request({
@@ -125,19 +96,41 @@ const getQueryCommentArray = data => {
         data 
     })
 }
+
+// 获取产品详情
+const getProductDetail = data => {
+    return request({
+        url: '/productDetail',
+        data 
+    })
+}
+// 获取产品保障明细
+const getProductItemDetail = data => {
+    return request({
+        url: '/productItemDetail',
+        data 
+    })
+}
+// 获取我的盟友信息
+const getAllyInfo = data => {
+    return request({
+        url: '/getAllyInfo',
+        data 
+    })
+}
 export {
     getIndexData,
     getMyCustomer,
-    getOpendId,
     addComment,
-    // getQueryComment,
     generateCard,
     getMyIndexData,
     getAccountRecord,
-    getQueryDoctorCommentArray,
-    getQueryCommentDetail,
     getHospitalArray,
     getHospitalDoctorArray,
     getQueryCommentDetailArray,
-    getQueryCommentArray
+    getQueryCommentArray,
+    getDoctorArray,
+    getProductDetail,
+    getProductItemDetail,
+    getAllyInfo
 }

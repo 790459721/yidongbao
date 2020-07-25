@@ -14,7 +14,7 @@ Page({
      */
     data: {
         hasInfo: false,
-        doctorInfo: {}
+        userInfo: {}
     },
 
     /**
@@ -43,14 +43,14 @@ Page({
     },
     //   获取本地存储数据
     getLocalData() {
-        const doctorInfo = wx.getStorageSync('doctorInfo') || null;
-        console.log(doctorInfo)
-        if(doctorInfo) {
-            const { hospitalName, ...rest} = doctorInfo
+        const userInfo = wx.getStorageSync('userInfo') || null;
+        console.log(userInfo)
+        if(userInfo) {
+            const { hospitalName, ...rest} = userInfo
             this.setNavigationBarTitle(hospitalName)
             this.setData({
                 hasInfo: true,
-                doctorInfo: {...rest}
+                userInfo: {...rest}
             },() => {
                 // wx.removeStorageSync('doctorInfo');
             })

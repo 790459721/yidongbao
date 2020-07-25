@@ -1,56 +1,16 @@
 <!-- pages/insuranceDetail/insuranceDetail.wxml -->
 <view class="insurance_detail_wrapper">
-    <view class="insurance_detail_banner"></view>
-    <view class="insurance_detail_about">
-        <view class="about_item">
-            <view class="top_text">22万</view>
-            <view class="bottom_text">最高保额</view>
-        </view>
-        <view class="about_item">
-            <view class="top_text">0免赔额</view>
-            <view class="bottom_text">无需健康告知</view>
-        </view>
-        <view class="about_item">
-            <view class="top_text">绿色通道</view>
-            <view class="bottom_text">快速理赔</view>
-        </view>
-    </view>
-    <view class="case_choose_box">
-        <view class="case_choose_handle">
-            <view class="handle_text">选择方案</view>
-            <view class="choose_handle_box">
-                <view class="cases_item">方案A</view>
-                <view class="cases_item">方案B</view>
-                <view class="cases_item">方案C</view>
-            </view>
-        </view>
-        <view class="price_info">
-            <view class="info_item">
-                <view class="price_title">身故或伤残保险金</view>
-                <view class="price_num">15万</view>
+    <image class="insurance_detail_banner" src="{{productProfile.banner}}"></image>
+    <view class="profile_box">
+        <view class="profile_info">
+            <view class="info_item" wx:for="{{productProfile.itemArray}}" wx:key="index">
+                <view class="item_title">{{item.title}}</view>
+                <view class="item_num">{{item.subtitle}}</view>
             </view>
             <view class="info_item">
-                <view class="price_title">并发症保险金</view>
-                <view class="price_num">0</view>
+                <view class="item_title">保障明细</view>
+                <view class="item_check" catch:tap="jumpSecurityDetail">查看</view>
             </view>
-        </view>
-        <view class="cost_range">
-            <view class="content_title">手术费范围</view>
-            <view class="content_tab">
-                <view class="tab_item">{{'手术费≤1500元'}}</view>
-                <view class="tab_item">{{'手术费>1500元'}}</view>
-            </view>
-        </view>
-        <view class="age_range">
-            <view class="content_title">被保人年龄</view>
-            <view class="content_tab">
-                <view class="tab_item">{{'28天(含) -6周岁(不含)'}}</view>
-                <view class="tab_item">{{'59周岁(不含)-70周岁(含)'}}</view>
-            </view>
-        </view>
-        <view class="ensure_detail">
-            <view class="content_title">保障明细</view>
-            <view class="content_btn">查看</view>
         </view>
     </view>
     <view class="tab_cards">
@@ -61,139 +21,18 @@
         </view>
     </view>
     <view class="cards_content">
-        <!-- <image class="product_feature" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/product_feature.png"></image> -->
-        <view class="why_area feature_top">
-            <view class="why_title">
-                <text>为什么买</text>
-                手术意外险
-            </view>
-            <view class="why_desc">做手术更安心，更有保障</view>
-            <view class="why_reasons_box">
-                <view class="resaons_item">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/img-01-01.png"></image>
-                    <view class="item_info">
-                        <view class="item_reason_title">提供医疗事故之外的意外风险保障</view>
-                        <view class="item_reason_desc">大约2/3不良医疗后果，医方没有过错，按法律规定，医院无需赔偿。</view>
-                    </view>
-                </view>
-                <view class="resaons_item">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/img-01-02.png"></image>
-                    <view class="item_info">
-                        <view class="item_reason_title">提供医疗事故之外的意外风险保障</view>
-                        <view class="item_reason_desc">大约2/3不良医疗后果，医方没有过错，按法律规定，医院无需赔偿。</view>
-                    </view>
-                </view>
-            </view>
-        </view>
-        <view class="why_area">
-            <view class="why_title">
-                <text class="appear_title">手术意外</text>
-                全方位保障
-            </view>
-            <view class="why_desc">手术意外险为你护航</view>
-            <view class="includes_tab">
-                <view class="item_box">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/img-02-01.png"></image>
-                    <view class="item_name">手术意外身故</view>
-                </view>
-                <view class="item_box">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/img-02-02.png"></image>
-                    <view class="item_name">手术意外残疾</view>
-                </view>
-                <view class="item_box">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/img-02-03.png"></image>
-                    <view class="item_name">手术并发症</view>
-                </view>
-            </view>
-            <view class="includes_desc">
-                保手术意外，保麻醉意外，保因手术意外导致的残疾，还保因手术意外导致的相关并发症等。
-            </view>
-        </view>
-        <view class="why_area">
-            <view class="why_title">
-                <text>人保承保</text>
-                放心可靠
-            </view>
-            <view class="why_desc">投保放心，理赔舒心</view>
-            <view class="advantage_box">
-                <image class="advantage_img" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/img-03-01.png"></image>
-                <view class="advantage_line_box">
-                    <view class="line_item first">
-                        最高30万保额，保障力度大。
-                    </view>
-                    <view class="line_item second">
-                        配备专属理赔团队，理赔绿色通道，提供便捷理赔服务
-                    </view>
-                    <view class="line_item third">
-                        中国人保财险承保，服务靠谱有保障
-                    </view>
-                </view>
-            </view>
-        </view>
-        <view class="why_area">
-            <view class="why_title">
-                经典案例
-            </view>
-            <view class="example_case_box">
-                <image class="case_user_avatar" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/img-04-01.png"></image>
-                <view class="case_right">
-                        <text decode="emsp" class="right_user_info">
-                            <text>赵女士  66岁  术后并发症</text>
-                        </text>
-                        <text decode="emsp" class="right_money">
-                            <text>保费  <text class="money_color">600</text>元 获赔  <text class="money_color">90000</text>元</text>
-                        </text>
-                </view>
-            </view>
-            <view class="example_case_introduct">
-                    <view class="section_part">
-                        消化科患者赵女士，66岁，2017年4月11日因结肠息肉入某院治疗，后于4月13日行内镜下粘膜切除术，14日发现术后创面撕裂，疑似穿孔，遂行镜下修补治疗。16日患者转外科行升结肠修补+回肠造瘘术，随病情好转，患者于5月17日出院。
-                    </view>
-                    <view class="section_part">
-                         5月18日向我公司报案，提供索赔资料，我公司审核完毕，于5月22日结案，并将9万元赔款汇入患者账户。此过程共历时3个工作日，及时的赔款有效缓解了患者的经济压力和精神压力，获得了患者及家属的认可。
-                    </view>
-                </view>
-        </view>
-        <view class="why_area explan_top">
-            <view class="why_title">
-                理赔指引
-            </view>
-            <view class="why_reasons_box">
-                <view class="resaons_item">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon-step-01.png"></image>
-                    <view class="item_info">
-                        <view class="item_reason_title">第1步：电话报案</view>
-                        <view class="item_reason_desc">发生事故后，拨打人保财险 24 小时服务专线“010-95518”，或直接在医院与承保派驻人员联系，针对案件情况记录报案信息。</view>
-                    </view>
-                </view>
-                <view class="resaons_item">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon-step-02.png"></image>
-                    <view class="item_info">
-                        <view class="item_reason_title">第2步：准备理赔材料</view>
-                        <view class="item_reason_desc">根据客服人员或承保派驻人员指引，准备相关理赔材料，并申请理赔。</view>
-                    </view>
-                </view>
-                <view class="resaons_item">
-                    <image class="item_icon" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/icon-step-03.png"></image>
-                    <view class="item_info">
-                        <view class="item_reason_title">第3步：赔款支付</view>
-                        <view class="item_reason_desc">确属保险责任范围后，在赔付协议达成后5到7个工作日内完成赔付。</view>
-                    </view>
-                </view>
-            </view>
-        </view>
-        <view class="why_area question_top">
-            <image class="common_question" mode="widthFix" src="https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/common_questions.png"></image>
-        </view>
+        <image class="profile_tese" src="{{productProfile.tese}}" mode="widthFix"/>
+        <image class="profile_tiaokuan" src="{{productProfile.tiaokuan}}" mode="widthFix"/>
+        <image class="profile_wenti" src="{{productProfile.wenti}}" mode="widthFix" bindload="wentiImageLoad"/>
     </view>
-    <view class="company_support">
-		本保险销售服务由北京鼎盛保险经纪有限责任公司提供
-    </view>
+    <!-- <view class="company_support">
+		本保险销售服务由善康禾诺保险经纪有限公司提供
+    </view> -->
     <view class="bottom_empty"></view>
     <view class="insurance_detail_footer">
         <view class="left">
             <text class="left_desc">保费</text>
-            <text class="left_price">￥380</text>
+            <text class="left_price">￥{{productProfile.price}}</text>
         </view>
         <view class="sub_btn" catch:tap="jumpPolicyForm">立即投保</view>
     </view>

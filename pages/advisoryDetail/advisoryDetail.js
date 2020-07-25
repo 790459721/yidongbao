@@ -4,31 +4,42 @@
  * @Description: 
  */ 
 // pages/advisoryDetail/advisoryDetail.js
-import {getQueryCommentDetail} from '../../utils/api'
+import {getQueryCommentDetailArray} from '../../utils/api'
+import {formatTime} from '../../utils/util'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    customer: [],
     commentArray: []
   },
   onLoad(options) {
-    const {customerId} = options
-    this.getQueryCommentDetail(+customerId)
+    this.getQueryCommentDetailArray()
   },
   handleInputComplete(e) {
     const {value} = e.detail
     console.log(value)
   },
-  async getQueryCommentDetail(customerId) {
-    const res = await getQueryCommentDetail({
-        customerId
+  async getQueryCommentDetailArray() {
+    const { id, doctorid } = this.options
+    const res = await getQueryCommentDetailArray({
+      doctorId: doctorid,
+      // userId: id
+      userId: 2
     })
     this.setData({
-        customer: res.customer,
-        commentArray: res.commentArray
+      commentArray: this.handleFormatTime(res.commentArray)
     })
-  }
+  },
+  handleFormatTime(data) {
+    data.forEach(item => {
+        item.gmtCreate = formatTime(new Date(item.gmtCreate))
+        item.commentSubArray.forEach(item => {
+            item.gmtCreate = formatTime(new Date(item.gmtCreate))
+        })
+    })
+    // data.reverse()
+    return data
+  },
 })

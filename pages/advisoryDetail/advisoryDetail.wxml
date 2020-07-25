@@ -1,22 +1,37 @@
 <!--pages/advisoryDetail/advisoryDetail.wxml-->
 <view class="advisory_detail_wrapper">
-    <view class="detail_patient_info">
-        <image class="patient_avatar" src="{{customer.headUrl}}"></image>
-        <view class="info_box">
-            <view class="patient_name">{{customer.name}}</view>
-            <view class="create_time">07-09</view>
+    <block wx:for="{{commentArray}}" wx:key="index">
+        <view class="detail_patient_info">
+            <image class="patient_avatar" src="{{item.headUrl}}"></image>
+            <view class="info_box">
+                <view class="patient_name">{{item.name}}</view>
+                <view class="create_time">{{item.gmtCreate}}</view>
+            </view>
         </view>
-    </view>
-    <view class="advisory_detail_content">
-        <text>医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题，请问怎么吃才健康医生我想问你一些问题</text>
-    </view>
-    <view class="advisory_detail_images">
-        <image wx:for="{{5}}" class="detail_images" src=""></image>
-    </view>
-    <view class="advisory_detail_return">
-        <text>回复:</text>
-        <input class="detail_return_input" type="text"
-            bindconfirm="handleInputComplete"
-        />
-    </view>
+        <view class="advisory_detail_content">
+            <text>{{item.content}}</text>
+        </view>
+        <!-- <view class="advisory_detail_images">
+            <image wx:for="{{5}}" class="detail_images" src=""></image>
+        </view> -->
+        <view class="advisory_detail_return" wx:if="{{item.commentSubArray.length}}">
+            <view class="message_item_box" wx:for="{{item.commentSubArray}}" wx:key="index">
+                <image class="person_avatar" src="{{item.headUrl || 'https://minipropub.oss-cn-shenzhen.aliyuncs.com/mini-yidongbao/default_avatar.png'}}"></image>
+                <view class="person_info">
+                    <view class="info_top">
+                        <view class="top_left">
+                            <text class="name">{{item.name}}</text>
+                            <text class="jobtitle">{{item.title}}</text>
+                        </view>
+                        <view class="top_right">
+                            <text>{{item.gmtCreate}}</text>
+                        </view>
+                    </view>
+                    <view class="bottom_content">
+                        <text>{{item.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
 </view>

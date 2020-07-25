@@ -32,6 +32,7 @@
         color: #333;
         font-size: 28rpx;
         line-height: 40rpx;
+
     }
     .advisory_detail_images {
         display: flex;
@@ -49,17 +50,60 @@
         }
     }
     .advisory_detail_return {
+        width: 100%;
         background: #F5F6FA;
-        width: 700rpx;
-        height: 54rpx;
-        display: flex;
-        align-items: center;
-        padding-left: 12rpx;
-        color: #BBBBC3;
-        line-height:40rpx;
+        border-radius: 2rpx;
+        padding-bottom: 80rpx;
+        position: relative;
+        padding: 20rpx 24rpx ;
         .detail_return_input {
             padding-left: 20rpx;
             width: 600rpx;
+        }
+        .message_item_box {
+            display: flex;
+            padding: 25rpx 0;
+            border-bottom: 1rpx solid #ddd;
+            .person_avatar {
+                width: 80rpx;
+                height: 80rpx;
+                border-radius: 50%;
+                background: #ccc;
+            }
+            .person_info {
+                padding-left: 12rpx;
+                flex: 1;
+                .info_top {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .top_left {
+                        .name {
+                            color: #333;
+                            font-size: 30rpx;
+                            line-height: 42rpx;
+                            font-weight: 500;
+                            margin-right: 20rpx;
+                        }
+                        .jobtitle {
+                            color: #999;
+                            font-size: 24rpx;
+                            line-height: 33rpx;
+                        }
+                    }
+                    .top_right {
+                        color: #999;
+                        font-size: 24rpx;
+                        line-height: 33rpx;
+                    }
+                }
+                .bottom_content {
+                    color: #666;
+                    font-size: 24rpx;
+                    line-height: 33rpx;
+                    margin-top: 7rpx;
+                }
+            }
         }
     }
 }

@@ -17,7 +17,8 @@
     "pages/myPolicy/myPolicy",
     "pages/policyDetail/policyDetail",
     "pages/insuranceDetail/insuranceDetail",
-    "pages/policyForm/policyForm"
+    "pages/policyForm/policyForm",
+    "pages/securityDetail/securityDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

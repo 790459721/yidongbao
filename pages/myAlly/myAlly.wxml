@@ -11,11 +11,6 @@
                     <view class="card_top_split"></view>
                 </view>
                 <view class="center_card_info">
-                    <!-- <view class="card_info_invites">
-                        <view class="invites_num">30</view>
-                        <view class="invite_text">邀请人数（人）</view>
-                    </view>
-                    <view class="center_card_info_split"></view> -->
                     <view class="card_info_joined">
                         <view class="joined_num">25</view>
                         <view class="joined_text">已加入（人）</view>

@@ -1,13 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-07-18 18:20:51
- * @LastEditTime: 2020-07-23 18:40:20
+ * @LastEditTime: 2020-07-25 23:56:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \yidongbao\app.js
  */ 
 //app.js
-import { getOpendId } from './utils/api'
 App({
   onLaunch: function () {
     // const token = wx.getStorageSync('token')
@@ -61,7 +60,6 @@ App({
     this.checkIsIPhoneX()
   },
   checkIsIPhoneX: function() {
-    const self = this
     wx.getSystemInfo({
       success: (res) => {
         // 根据 model 进行判断

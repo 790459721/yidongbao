@@ -5,7 +5,7 @@
  */ 
 // 获取当前帐号信息
 const accountInfo = wx.getAccountInfoSync();
-console.log(accountInfo)
+// console.log(accountInfo)
 // env类型
 export const env = accountInfo.miniProgram.envVersion;
 console.log(env)
@@ -80,7 +80,7 @@ const wxRequest = (url, rest, token) => {
                 console.log('result',result)
                 if(result.data.errCode !== 0) {
                     wx.showToast({
-                        title: result.data.errMsg,
+                        title: result.data.errMsg || result.data.error,
                         icon: 'none',
                         image: '',
                         duration: 1500,
@@ -101,6 +101,16 @@ const wxRequest = (url, rest, token) => {
 export const request = ({url, ...rest}) => {
     const token = wx.getStorageSync('token');
     return new Promise((resolve, reject) => {
+        // wx.checkSession({
+        //     success: (result) => {
+        //         console.log('result',result);
+        //     },
+        //     fail: (err) => {
+        //         console.log(err);
+        //     },
+        //     complete: () => {}
+        // });
+          
         if(token) {
             const data = wxRequest(url, rest, token) 
             resolve(data)
@@ -109,7 +119,7 @@ export const request = ({url, ...rest}) => {
                 getToken(code).then(res => {
                     const {token, user} = res.data
                     wx.setStorageSync('token', token);
-                    wx.setStorageSync('loginData', user);
+                    wx.setStorageSync('userInfo', user);
                     const data = wxRequest(url, rest, token)
                     resolve(data)
                 })

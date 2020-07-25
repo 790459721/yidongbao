@@ -48,16 +48,57 @@
   width: 31%;
 }
 .advisory_detail_wrapper .advisory_detail_return {
+  width: 100%;
   background: #F5F6FA;
-  width: 700rpx;
-  height: 54rpx;
-  display: flex;
-  align-items: center;
-  padding-left: 12rpx;
-  color: #BBBBC3;
-  line-height: 40rpx;
+  border-radius: 2rpx;
+  padding-bottom: 80rpx;
+  position: relative;
+  padding: 20rpx 24rpx ;
 }
 .advisory_detail_wrapper .advisory_detail_return .detail_return_input {
   padding-left: 20rpx;
   width: 600rpx;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box {
+  display: flex;
+  padding: 25rpx 0;
+  border-bottom: 1rpx solid #ddd;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box .person_avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #ccc;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box .person_info {
+  padding-left: 12rpx;
+  flex: 1;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box .person_info .info_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box .person_info .info_top .top_left .name {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: 500;
+  margin-right: 20rpx;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box .person_info .info_top .top_left .jobtitle {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 33rpx;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box .person_info .info_top .top_right {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 33rpx;
+}
+.advisory_detail_wrapper .advisory_detail_return .message_item_box .person_info .bottom_content {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  margin-top: 7rpx;
 }

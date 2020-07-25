@@ -5,7 +5,7 @@
  */ 
 // pages/advisory/advisory.js
 import {jumpPage} from '../../utils/jumpPage'
-import { getQueryDoctorCommentArray, getQueryCommentArray } from '../../utils/api'
+import { getQueryCommentArray } from '../../utils/api'
 import { monthFormatTime } from '../../utils/util'
 Page({
 
@@ -34,9 +34,11 @@ Page({
   },
   jumpToAdvisoryDetail(e) {
       console.log(e)
-      const { customerid } = e.currentTarget.dataset
+      const { id, doctorid } = e.currentTarget.dataset
+      console.log(id, doctorid);
       jumpPage('/pages/advisoryDetail/advisoryDetail',{
-        customerId:customerid 
+        id,
+        doctorid
       })
   }
 })
