@@ -112,9 +112,19 @@ const getProductItemDetail = data => {
     })
 }
 // 获取我的盟友信息
-const getAllyInfo = data => {
+const getAllyPageInfo = data => {
     return request({
-        url: '/getAllyInfo',
+        url: '/allyPageInfo',
+        method: 'POST',
+        data 
+    })
+}
+
+// 扫码或分享进入生成名片
+const allyGenerateCard = data => {
+    return request({
+        url: '/allyPageInfo',
+        method: 'POST',
         data 
     })
 }
@@ -132,5 +142,6 @@ export {
     getDoctorArray,
     getProductDetail,
     getProductItemDetail,
-    getAllyInfo
+    getAllyPageInfo,
+    allyGenerateCard
 }

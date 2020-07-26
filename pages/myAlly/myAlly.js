@@ -3,7 +3,7 @@
  * @Date: 2020-07-17 16:40:02
  * @Description: 
  */
-import { getAllyInfo } from "../../utils/api";
+import { getAllyPageInfo } from "../../utils/api";
 
  
 // pages/myAlly/myAlly.js
@@ -15,7 +15,10 @@ Page({
    */
   data: {
     sourceId: null,
-    idShowDailog: false
+    idShowDailog: false,
+    allyAmount: 0,
+    allyList: [],
+    allyUrl: ''
   },
 
   /**
@@ -23,7 +26,7 @@ Page({
    */
   onLoad: function (options) {
     const userInfo = wx.getStorageSync('userInfo');
-    this.getAllyInfo()
+    this.getAllyPageInfo()
     this.setData({
         sourceId: userInfo.id
     })
@@ -38,9 +41,15 @@ Page({
         idShowDailog: false
     })
   },
-  async getAllyInfo() {
-    const res = await getAllyInfo()
+  async getAllyPageInfo() {
+    const res = await getAllyPageInfo()
     console.log(res);
+    const {allyAmount, allyList, allyUrl} = res
+    this.setData({
+      allyAmount,
+      allyList,
+      allyUrl
+    })
   },
   /**
    * 用户点击右上角分享
@@ -48,7 +57,7 @@ Page({
   onShareAppMessage: function (res) {
     console.log(res)
     const {sourceId} = this.data
-    console.log(sourceId)
+    console.log('sourceId', sourceId)
     return {
         title: '医董保',
         path: `/pages/editMyCard/editMyCard?fromw=ToFace&sourceId=${sourceId}`,

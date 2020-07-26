@@ -167,10 +167,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 15,
 					"name": "编辑名片",
 					"pathName": "pages/editMyCard/editMyCard",
-					"query": "",
+					"query": "fromw=ToFace&sourceId=4",
 					"scene": null
 				},
 				{

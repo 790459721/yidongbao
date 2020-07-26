@@ -8,7 +8,7 @@ import {
     departmentList
 } from '../../const/myCard'
 import {
-    generateCard
+    generateCard, allyGenerateCard
 } from '../../utils/api'
 import { baseUrl, env} from '../../utils/http'
 // pages/myCard/myCard.js
@@ -72,6 +72,12 @@ Page({
     },
     getOptions() {
         console.log(this.options)
+        const {fromw, sourceId} = this.options
+        this.setData({
+            fromw,
+            sourceId
+        })
+
     },
     formInputChange(e) {
         const {
@@ -194,17 +200,32 @@ Page({
             jobTitle,
             name
         } = this.data.formData
-        const res = await generateCard({
-            name,
-            headUrl: avatar,
-            hospitalName,
-            departmentName: department,
-            title: jobTitle
-        })
-        wx.setStorageSync('doctorInfo', res.user);
-        wx.redirectTo({
-            url: '/pages/myCard/myCard',
-        });
-          
+        const { sourceId, fromw } = this.data
+        if(fromw === 'ToFace') {
+            const res = await allyGenerateCard({
+                name,
+                headUrl: avatar,
+                hospitalName,
+                departmentName: department,
+                title: jobTitle,
+                parentId: sourceId
+            })
+            wx.setStorageSync('doctorInfo', res.user);
+            wx.redirectTo({
+                url: '/pages/myCard/myCard',
+            });
+        }else {
+            const res = await generateCard({
+                name,
+                headUrl: avatar,
+                hospitalName,
+                departmentName: department,
+                title: jobTitle
+            })
+            wx.setStorageSync('doctorInfo', res.user);
+            wx.redirectTo({
+                url: '/pages/myCard/myCard',
+            });
+        }
     }
 })
